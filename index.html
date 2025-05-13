@@ -15,7 +15,54 @@
 
 <body>
 
-<script src="./script/script.js"></script>
+    <main>
+
+        <section class="section-flex-direction">
+
+            <h2>Flex direction</h2>
+
+            <p class="paragraph">
+                A propriedade <code>flex-direction</code> é <strong>responsável por definir a direção</strong> dos
+                elementos filhos dentro do container flex. Ao alternar seus valores, é possível organizar os elementos
+                <em>em linha</em>, com o primeiro elemento à esquerda utilizando <code>row</code>, ou de forma
+                invertida com <code>row-reverse</code>. Também é possível dispor os elementos <em>em coluna</em> com
+                <code>column</code>, sendo exibidos de cima para baixo, ou de forma invertida com
+                <code>column-reverse</code>.
+            </p>
+
+            <div class="container-example">
+
+                <div class="div-flex-direction">
+                    <p class="paragraph">flex-direction:</p>
+                    <button id="flex-direction-row">row</button>
+                    <button id="flex-direction-row-reverse">row-reverse</button>
+                    <button id="flex-direction-column">column</button>
+                    <button id="flex-direction-column-reverse">column-reverse</button>
+                </div>
+
+
+                <div id="div-flex-direction">
+                    <div class="box box-blue">
+                        <p>1</p>
+                    </div>
+                    <div class="box box-red">
+                        <p>2</p>
+                    </div>
+                    <div class="box box-green">
+                        <p>3</p>
+                    </div>
+                    <div class="box box-yellow">
+                        <p>4</p>
+                    </div>
+                </div>
+
+            </div>
+
+        </section>
+
+    </main>
+
+    <script src="./script/script.js"></script>
 
 </body>
 

@@ -1,0 +1,130 @@
+
+:root {
+    --background-color: #1E1E1E;
+    --background-color-secondary: #323232; 
+    --text-color: #f4f4f4;
+    --button-color: #4F8EF7;
+    --color-blue: #4F8EF7;
+    --color-red: #FF5C5C;
+    --color-green: #3ED598;
+    --color-yellow: #FFD644;
+    --shadow: 0.2em 0.2em 0.4em rgba(0, 0, 0, 0.2);
+}
+
+* {
+    font-family: sans-serif;
+}
+
+body{
+    background-color: var(--background-color);
+    font-size: 16px;
+    line-height: 1.5em;
+    text-indent: justify;
+    margin: 0 10vw;
+    color: var(--text-color);
+}
+
+section {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+h2 {
+    font-size: 2em;
+    margin: 0 0 1em 0;
+}
+
+p {
+    font-size: 1.2em;
+    text-align: justify;
+    /* margin: 0 0 1em 0; */
+}
+
+code {
+  background-color: var(--background-color-secondary);
+  padding: 0.1em 0.2em;
+  border-radius: 0.1em;
+  font-size: 1em;
+}
+
+button {
+    font-size: 1.2em;
+    font-weight: bold;
+    padding: 1vw 1.5vw;
+    width: 15vw;
+    color: var(--background-color-secondary);
+    background-color: var(--button-color);
+    border: none;
+    border-radius: 0.2em;
+    box-shadow: var(--shadow);
+}
+
+button:hover {
+    background-color: var(--background-color-secondary);
+    color: var(--text-color);
+    border: 0.1em solid var(--text-color);
+}
+
+.paragraph{
+    text-align: justify;
+    margin: 0 0 1em 0;
+}
+
+.container-example {
+    display: flex;
+    margin: 2vw;
+    padding: 2vw;
+    align-items: center;
+    justify-content: space-around;
+    background-color: var(--background-color-secondary);
+    border-radius: 0.5em;
+    box-shadow: var(--shadow);
+}
+
+#div-flex-direction {
+    width: 26vw;
+    height: 26vw;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: row;
+    gap: 1vw;
+}
+
+.div-flex-direction{
+    display: flex;
+    align-items: start;
+    justify-content: center;
+    flex-direction: column;
+    gap: 1vw;
+    margin: 2vw 0 2vw 0;
+}
+
+.box {
+    color: var(--background-color-secondary);
+    font-weight: bold;
+    width: 5vw;
+    height: 5vw;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 0.2em;
+    box-shadow: var(--shadow);
+}
+
+.box-blue {
+    background-color: var(--color-blue);
+}
+
+.box-red {
+    background-color: var(--color-red);
+} 
+
+.box-green {
+    background-color: var(--color-green);
+}
+
+.box-yellow {
+    background-color: var(--color-yellow);
+}
