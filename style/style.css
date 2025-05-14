@@ -2,7 +2,8 @@
     --background-color: #F6F5F2;
     --background-color-secondary: #F0EBE3;
     --text-color: #181C14;
-    --button-color: #76ABAE;
+    --text_special-color: #41787A;
+    --button-color: #76ABAE; /*#41787A*/
     --color-blue: #4F8EF7;
     --color-red: #FF5C5C;
     --color-green: #3ED598;
@@ -15,6 +16,7 @@
         --background-color: #181C14;
         --background-color-secondary: #3C3D37;
         --text-color: #F6F5F2;
+        --text_special-color: #A5D9DB;
         --button-color: #76ABAE;
         --color-blue: #4F8EF7;
         --color-red: #FF5C5C;
@@ -31,19 +33,67 @@ body {
     background-color: var(--background-color);
     color: var(--text-color);
     font-size: 14px;
-    line-height: 1.5rem;
+    line-height: 2rem;
     text-indent: justify;
     margin: 0 10vw;
 }
 
+main {
+    display: flex;
+    flex-direction: column;
+    gap: 2vw;
+}
+
+article {
+    width: 100%;
+}
+
+aside {
+    display: none;
+}
+
+h1 {
+    font-size: 2.2em;
+    margin: 1em 0;
+    color: var(--text_special-color);
+}
+
 h2 {
     font-size: 1.5em;
+    margin: 2em 0 1em 0;
+    color: var(--text_special-color);
+}
+
+h3 {
+    font-size: 1.1em;
     margin: 0 0 1em 0;
 }
 
 p {
     font-size: 1em;
     text-align: justify;
+}
+
+a:link {
+    color: var(--button-color);
+    /* text-decoration: none; */
+}
+
+a:visited {
+    color: var(--button-color);
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+a:active {
+    background-color: var(--button-color);
+    color: var(--background-color-secondary);
+}
+
+ul {
+    list-style: none;
 }
 
 code {
@@ -71,15 +121,25 @@ button:hover {
     border: 0.1em solid var(--text-color);
 }
 
+.header {
+    margin: 1em 0;
+    padding: 1em 0;
+    border-bottom: 1px solid var(--text-color);
+}
+
 .paragraph {
     text-align: justify;
     margin: 0 0 1em 0;
 }
 
+.anchor {
+    font-weight: bold;
+}
+
 .container-example {
     display: flex;
-    margin: 2vw;
-    padding: 2vw 5vw;
+    margin: 2vw 0;
+    padding: 3vw 2vw;
     flex-direction: column;
     align-items: center;
     justify-content: space-between;
@@ -97,12 +157,16 @@ button:hover {
     display: flex;
     flex-direction: column;
     align-items: center;
-    justify-content: space-between;
     width: 100%;
+    gap: 2vw;
+}
+
+.container-example-paragraph {
+    font-size: 1.2em;
 }
 
 .container-example-button {
-    width: 50vw;
+    width: 60vw;
     display: flex;
     flex-direction: column;
     align-items: start;
@@ -138,22 +202,25 @@ button:hover {
     background-color: var(--color-yellow);
 }
 
-#div-flex-direction {
+.container-example-work {
     width: 60vw;
     height: 60vw;
+    border: 0.1em solid var(--background-color);
     display: flex;
     align-items: center;
+    border-radius: 0.2em;
+}
+
+#div-flex-direction {
     justify-content: center;
     flex-direction: row;
     gap: 1vw;
 }
 
-/*AVALIAR SE NECESSARIO */
-/* section {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-} */
+#div-justify-content {
+    justify-content: flex-start;
+    flex-direction: row;
+}
 
 @media (min-width: 768px) {
 
@@ -163,10 +230,6 @@ button:hover {
 
     h2 {
         font-size: 1.8em;
-    }
-
-    p {
-        font-size: 1.2em;
     }
 
     button {
@@ -180,16 +243,18 @@ button:hover {
         align-items: center;
         justify-content: space-between;
         width: 100%;
+        gap: 0;
     }
 
     .container-example-button {
         width: 35vw;
     }
 
-    #div-flex-direction {
-        width: 26vw;
-        height: 26vw;
+    .container-example-work {
+        width: 20vw;
+        height: 20vw;
     }
+
 
     .box {
         width: 5vw;
@@ -199,18 +264,27 @@ button:hover {
 }
 
 @media (min-width: 1024px) {
-    
-    h2 {
-        font-size: 2em;
+
+    main {
+        flex-direction: row;
+        gap: 5vw;
+    }
+
+    article {
+        width: 70%;
+    }
+
+    aside {
+        display: flex;
     }
 
     button {
         font-size: 1.2em;
         width: 70%;
     }
-   
+
     .container-example-button {
-        width: 30vw;
+        width: 25vw;
     }
 
 }

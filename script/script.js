@@ -1,26 +1,21 @@
 const divFlexDirection = document.getElementById("div-flex-direction");
 const spanFlexDirection = document.getElementById("span-flex-direction");
-const row = document.getElementById("flex-direction-row");
-const rowReverse = document.getElementById("flex-direction-row-reverse");
-const column = document.getElementById("flex-direction-column");
-const columnReverse = document.getElementById("flex-direction-column-reverse");
+const flexDirectionOptions = ["row", "row-reverse", "column", "column-reverse"]
 
-row.addEventListener("click", () => {
-    divFlexDirection.style.flexDirection = "row";
-    spanFlexDirection.textContent = "row";
+flexDirectionOptions.forEach(direction => {
+    document.getElementById(`flex-direction-${direction}`).addEventListener("click", () => {
+        divFlexDirection.style.flexDirection = direction;
+        spanFlexDirection.textContent = direction;
+    });
 });
 
-rowReverse.addEventListener("click", () => {
-    divFlexDirection.style.flexDirection = "row-reverse";
-    spanFlexDirection.textContent = "row-reverse";
-});
+const divJustifyContent = document.getElementById("div-justify-content");
+const spanJustifyContent = document.getElementById("span-justify-content");
+const justifyContentOptions = ["flex-start", "flex-end", "center", "space-between", "space-around", "space-evenly"]
 
-column.addEventListener("click", () => {
-    divFlexDirection.style.flexDirection = "column";
-    spanFlexDirection.textContent = "column";
-});
-
-columnReverse.addEventListener("click", () => {
-    divFlexDirection.style.flexDirection = "column-reverse";
-    spanFlexDirection.textContent = "column-reverse";
-});
+justifyContentOptions.forEach(justify => {
+    document.getElementById(`justify-content-${justify}`).addEventListener("click", () => {
+        divJustifyContent.style.justifyContent = justify;
+        spanJustifyContent.textContent = justify;
+    })
+})

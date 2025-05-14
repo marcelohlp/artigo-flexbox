@@ -15,56 +15,216 @@
 
 <body>
 
+    <header class="header">
+
+        <h1>Flexbox: uma importante ferramenta na construção de layouts</h1>
+
+        <p>
+            Por <a href="https://www.linkedin.com/in/marcelo-hpaschoal/" class="anchor">Marcelo Paschoal</a>,
+            especialista em
+            desenvolvimento Java e Web.
+        </p>
+
+    </header>
+
     <main>
 
-        <section class="section-flex-direction">
+        <article>
 
-            <h2>Flex direction</h2>
+            <section>
 
-            <p class="paragraph">
-                A propriedade <code>flex-direction</code> é <strong>responsável por definir a direção</strong> dos
-                elementos filhos dentro do container flex. Ao alternar seus valores, é possível organizar os elementos
-                <em>em linha</em>, com o primeiro elemento à esquerda utilizando <code>row</code>, ou de forma
-                invertida com <code>row-reverse</code>. Também é possível dispor os elementos <em>em coluna</em> com
-                <code>column</code>, sendo exibidos de cima para baixo, ou de forma invertida com
-                <code>column-reverse</code>.
-            </p>
+                <h2>O que é flexbox?</h2>
 
-            <div class="container-example">
+                <p class="paragraph">
+                    O <strong>Flexbox</strong> é um modelo de layout em <strong>CSS</strong> que facilita a criação de
+                    interfaces mais flexíveis e adaptáveis. Ele permite organizar elementos de
+                    forma <strong>unidimensional</strong> — em linha ou em coluna — dentro de um <em>flex
+                        container</em>, ou
+                    seja, um contêiner que utiliza o Flexbox para controlar diretamente a distribuição de seus elementos
+                    filhos. Com ele, é possível definir com facilidade o <strong>alinhamento</strong>, o
+                    <strong>tamanho</strong>, o <strong>espaçamento</strong> e a <strong>ordem</strong> dos itens, o que
+                    contribui para layouts mais limpos e eficientes em diferentes tamanhos de tela. O Flexbox também
+                    veio
+                    para simplificar práticas antigas de criação de layout baseadas em propriedades como
+                    <code>float</code>
+                    e <code>position</code>, oferecendo uma solução mais intuitiva e poderosa. Para utilizá-lo, basta
+                    aplicar <code>display: flex;</code> ao elemento contêiner.
+                </p>
 
-                <p class="container-example-title">Exemplo de flex-direction:</p>
+            </section>
 
-                <div class="container-example-test">
-    
-                    <div class="container-example-button">
-                        <p class="paragraph">flex-direction: <span id="span-flex-direction">row</span></p>
-                        <button id="flex-direction-row">row</button>
-                        <button id="flex-direction-row-reverse">row-reverse</button>
-                        <button id="flex-direction-column">column</button>
-                        <button id="flex-direction-column-reverse">column-reverse</button>
+            <section class="section-flex-direction">
+
+                <h2>Conceitos fundamentais do Flexbox</h2>
+
+                <p class="paragraph">
+                    Mas antes de continuarmos, precisamos definir alguns conceitos importantes que nos auxiliarão no
+                    decorrer deste artigo. Entender como funcionam o <strong>main axis</strong>, <strong>cross
+                        axis</strong>, <strong>main size</strong>, <strong>cross size</strong>, <strong>main
+                        start</strong>, <strong>main end</strong>, <strong>cross start</strong> e <strong>cross
+                        end</strong> é fundamental para aplicar corretamente as principais propriedades do Flexbox. A
+                    seguir, apresentamos a explicação de cada um deles.
+                </p>
+
+                <ul>
+                    <li>
+                        <h3>Eixos (Axis)</h3>
+                        <p class="paragraph">
+                            O <strong>main axis</strong> é o eixo principal no qual os elementos filhos do contêiner
+                            flex são
+                            dispostos, variando de acordo com a direção definida — em linha ou em coluna. Ele não está
+                            relacionado
+                            diretamente às orientações horizontal ou vertical, mas sim à propriedade
+                            <code>flex-direction</code>,
+                            que abordaremos mais à frente. O <strong>cross axis</strong>, por outro lado, é o eixo
+                            perpendicular
+                            ao
+                            <em>main axis</em>, sendo fundamental para compreender o alinhamento dos elementos filhos
+                            por meio
+                            da
+                            propriedade <code>align-items</code>.
+                        </p>
+                    </li>
+                    <li>
+                        <h3>Tamanho (Size)</h3>
+                        <p class="paragraph">
+                            O <strong>main size</strong> é o tamanho total do contêiner flex em relação ao <strong>main
+                                axis</strong>, enquanto o <strong>cross size</strong> é o tamanho total do contêiner
+                            flex em
+                            relação
+                            ao <strong>cross axis</strong>.
+                        </p>
+                    </li>
+                    <li>
+                        <h3>Início e fim do contêiner (Start and End)</h3>
+                        <p class="paragraph">
+                            Tanto o <strong>main start</strong> quanto o <strong>cross start</strong> definem o início
+                            de um
+                            contêiner em relação ao eixo principal ou ao eixo perpendicular. Por outro lado, o
+                            <strong>main
+                                end</strong> e o <strong>cross end</strong> delimitam o fim do contêiner em relação a
+                            esses
+                            eixos.
+                        </p>
+                    </li>
+                </ul>
+
+            </section>
+
+            <section class="section-flex-direction">
+
+                <h2>Flex direction</h2>
+
+                <p class="paragraph">
+                    A propriedade <code>flex-direction</code> é <strong>responsável por definir a direção</strong> dos
+                    elementos filhos dentro do container flex. Ao alternar seus valores, é possível organizar os
+                    elementos
+                    <em>em linha</em>, com o primeiro elemento à esquerda utilizando <code>row</code>, ou de forma
+                    invertida com <code>row-reverse</code>. Também é possível dispor os elementos <em>em coluna</em> com
+                    <code>column</code>, sendo exibidos de cima para baixo, ou de forma invertida com
+                    <code>column-reverse</code>.
+                </p>
+
+                <div class="container-example">
+
+                    <p class="container-example-title">Exemplo de flex-direction:</p>
+
+                    <div class="container-example-test">
+
+                        <div class="container-example-button">
+                            <p class="container-example-paragraph">flex-direction: <span
+                                    id="span-flex-direction">row</span>
+                            </p>
+                            <button id="flex-direction-row">row</button>
+                            <button id="flex-direction-row-reverse">row-reverse</button>
+                            <button id="flex-direction-column">column</button>
+                            <button id="flex-direction-column-reverse">column-reverse</button>
+                        </div>
+
+                        <div id="div-flex-direction" class="container-example-work">
+                            <div class="box box-blue">
+                                <p>1</p>
+                            </div>
+                            <div class="box box-red">
+                                <p>2</p>
+                            </div>
+                            <div class="box box-green">
+                                <p>3</p>
+                            </div>
+                        </div>
+
                     </div>
-    
-    
-                    <div id="div-flex-direction">
-                        <div class="box box-blue">
-                            <p>1</p>
-                        </div>
-                        <div class="box box-red">
-                            <p>2</p>
-                        </div>
-                        <div class="box box-green">
-                            <p>3</p>
-                        </div>
-                        <div class="box box-yellow">
-                            <p>4</p>
-                        </div>
-                    </div>
-    
+
                 </div>
 
-            </div>
+            </section>
 
-        </section>
+            <section class="section-flex-direction">
+
+                <h2>Justify content</h2>
+
+                <p class="paragraph">
+                    A propriedade <code>justify-content</code> é responsável por <strong>alinhar o conteúdo de um container ao
+                    longo de seu main axis</strong>, definindo como os elementos serão distribuídos nesse eixo. Ao
+                    utilizarmos essa propriedade, temos algumas opções bem interessantes. Com o valor
+                    <code>flex-start</code>, os itens são agrupados no início do <em>main axis</em> (também chamado de
+                    <em>main start</em>). Já com <code>flex-end</code>, temos o comportamento oposto, com os elementos
+                    agrupados no final (<em>main end</em>). Quando usamos <code>center</code>, os itens são
+                    centralizados ao longo do eixo principal.
+                </p>
+
+                <p class="paragraph">
+                    Mas essas não são as únicas opções. Também é possível definir espaçamentos entre os elementos do
+                    container. Com <code>space-between</code>, todos os itens são separados por espaços iguais, sendo
+                    que o primeiro fica encostado no <em>main start</em> e o último no <em>main end</em>. Com
+                    <code>space-around</code>, todos os itens recebem o mesmo espaçamento dos dois lados, o que resulta
+                    em um espaço duplo entre os elementos internos e um espaço simples nas extremidades. Por fim, com
+                    <code>space-evenly</code>, garantimos que os elementos tenham exatamente os mesmos
+                    espaços entre si e também entre as bordas do container.
+                </p>
+
+
+                <div class="container-example">
+
+                    <p class="container-example-title">Exemplo de justify-content:</p>
+
+                    <div class="container-example-test">
+
+                        <div class="container-example-button">
+                            <p class="container-example-paragraph">justify-content: <span
+                                    id="span-justify-content">flex-start</span>
+                            </p>
+                            <button id="justify-content-flex-start">flex-start</button>
+                            <button id="justify-content-flex-end">flex-end</button>
+                            <button id="justify-content-center">center</button>
+                            <button id="justify-content-space-between">space-between</button>
+                            <button id="justify-content-space-around">space-around</button>
+                            <button id="justify-content-space-evenly">space-evenly</button>
+                        </div>
+
+                        <div id="div-justify-content" class="container-example-work">
+                            <div class="box box-blue">
+                                <p>1</p>
+                            </div>
+                            <div class="box box-red">
+                                <p>2</p>
+                            </div>
+                            <div class="box box-green">
+                                <p>3</p>
+                            </div>
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </section>
+
+        </article>
+
+        <aside>
+
+        </aside>
 
     </main>
 
