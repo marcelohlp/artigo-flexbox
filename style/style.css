@@ -46,16 +46,13 @@ main {
     gap: 2vw;
 }
 
-article {
-    width: 100%;
-}
-
 aside {
     display: none;
 }
 
 h2 {
     font-size: 2.2em;
+    line-height: 1.2em;
     margin: 1em 0;
     color: var(--text_special-color);
 }
@@ -121,6 +118,10 @@ button:hover {
     background-color: var(--background-color-secondary);
     color: var(--text-color);
     border: 0.1em solid var(--text-color);
+}
+
+.article-content {
+    width: 100%;
 }
 
 .header {
@@ -222,6 +223,13 @@ button:hover {
     padding: 10% 0 0 0;
 }
 
+.box-flex-grow {
+    flex-grow: 1;
+    flex-basis: 0;
+    height: 25%;
+}
+
+
 .container-example-work {
     flex: 0 0 60vw;
     aspect-ratio: 1 / 1;
@@ -229,6 +237,23 @@ button:hover {
     display: flex;
     align-items: center;
     border-radius: 0.2em;
+}
+
+.span-blue {
+    color: var(--color-blue);
+}
+
+.span-red {
+    color: var(--color-red);
+}
+
+.span-green {
+    color: var(--color-green);
+}
+
+.div-order {
+    display: flex;
+    gap: 1vw;
 }
 
 #div-flex-direction {
@@ -257,15 +282,12 @@ button:hover {
 
 #div-flex-wrap {
     justify-content: flex-start;
-    flex-direction: row;
     align-content: center;
-    flex-wrap: nowrap;
     gap: 1vw;
 }
 
 #div-align-self {
     justify-content: center;
-    flex-direction: row;
     align-content: center;
     flex-wrap: nowrap;
     gap: 1vw;
@@ -273,6 +295,30 @@ button:hover {
 
 #box-align-self {
     align-self: auto;
+}
+
+#div-order {
+    justify-content: center;
+    align-content: center;
+    gap: 1vw;
+}
+
+#box-blue-order{
+    order: 0;
+}
+
+#box-red-order {
+    order: 0;
+}
+
+#box-green-order{
+    order: 0;
+}
+
+#div-flex-grow {
+    justify-content: space-around;
+    align-content: center;
+    gap: 1vw;  
 }
 
 @media (min-width: 768px) {
@@ -316,16 +362,16 @@ button:hover {
         gap: 5vw;
     }
 
-    article {
-        width: 70%;
-    }
-
     aside {
         display: flex;
     }
 
     button {
         font-size: 1.2em;
+        width: 70%;
+    }
+
+    .article-content {
         width: 70%;
     }
 

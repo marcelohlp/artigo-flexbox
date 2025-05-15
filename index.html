@@ -19,7 +19,7 @@
 
     <main>
 
-        <div>
+        <div class="article-content">
 
             <header class="header">
 
@@ -58,7 +58,7 @@
 
                 </section>
 
-                <section class="section-flex-direction">
+                <section>
 
                     <h3>Conceitos fundamentais do Flexbox</h3>
 
@@ -109,7 +109,7 @@
 
                 </section>
 
-                <section class="section-flex-direction">
+                <section>
 
                     <h3>Flex direction</h3>
 
@@ -159,7 +159,7 @@
 
                 </section>
 
-                <section class="section-flex-direction">
+                <section>
 
                     <h3>Justify content</h3>
 
@@ -225,7 +225,7 @@
 
                 </section>
 
-                <section class="section-flex-direction">
+                <section>
 
                     <h3>Align items</h3>
 
@@ -290,7 +290,7 @@
 
                 </section>
 
-                <section class="section-flex-direction">
+                <section>
 
                     <h3>Align content</h3>
 
@@ -365,7 +365,7 @@
 
                 </section>
 
-                <section class="section-flex-direction">
+                <section>
 
                     <h3>Flex wrap</h3>
 
@@ -440,7 +440,7 @@
 
                 </section>
 
-                <section class="section-flex-direction">
+                <section>
 
                     <h3>Sabia que podemos alterar o comportamento dos elementos filhos?</h3>
 
@@ -456,7 +456,7 @@
 
                 </section>
 
-                <section class="section-flex-direction">
+                <section>
 
                     <h3>Align self</h3>
 
@@ -506,6 +506,114 @@
                                 </div>
                                 <div class="box box-green">
                                     <p>3</p>
+                                </div>
+                            </div>
+
+                        </div>
+
+                    </div>
+
+                </section>
+
+                <section>
+
+                    <h3>Order</h3>
+
+                    <p class="paragraph">
+                        Nem mesmo a ordem dos elementos em um container flex precisa ser a mesma declarada no arquivo
+                        HTML! Com a propriedade <code>order</code>, podemos definir, elemento por elemento, qual deles
+                        aparecerá primeiro.
+                    </p>
+
+                    <p class="paragraph">
+                        A propriedade <code>order</code> recebe valores numéricos e, quanto <strong>menor</strong> o
+                        valor, maior a prioridade na exibição. Ou seja, elementos com valores menores serão exibidos
+                        antes dos que tiverem valores maiores. O valor padrão é <code>0</code>, mas você pode usar
+                        números negativos ou positivos para reorganizar os itens conforme desejar.
+                    </p>
+
+                    <div class="container-example">
+
+                        <p class="container-example-title">Exemplo de order:</p>
+
+                        <div class="container-example-test">
+
+                            <div class="container-example-button">
+                                <div class="div-order">
+                                    <p class="container-example-paragraph span-blue">order: <span
+                                            id="span-order-blue">0</span>
+                                    </p>
+                                    <p class="container-example-paragraph span-red">order: <span
+                                            id="span-order-red">0</span>
+                                    </p>
+                                    <p class="container-example-paragraph span-green">order: <span
+                                            id="span-order-green">0</span>
+                                    </p>
+                                </div>
+                                <button id="order-html">padrão html</button>
+                                <button id="order-blue">azul primeiro</button>
+                                <button id="order-red">vermelho primeiro</button>
+                                <button id="order-green">verde primeiro</button>
+                            </div>
+
+                            <div id="div-order" class="container-example-work">
+                                <div id="box-blue-order" class="box box-blue">
+                                    <p>1</p>
+                                </div>
+                                <div id="box-red-order" class="box box-red">
+                                    <p>2</p>
+                                </div>
+                                <div id="box-green-order" class="box box-green">
+                                    <p>3</p>
+                                </div>
+                            </div>
+
+                        </div>
+
+                    </div>
+
+                </section>
+
+                <section>
+
+                    <h3>Flex grow</h3>
+
+                    <p class="paragraph">
+                        Com a propriedade <code>flex-grow</code>, você pode <strong>definir qual proporção do espaço
+                            disponível
+                            no container flex cada elemento irá ocupar</strong>. Essa propriedade é especialmente útil
+                        quando há
+                        espaço sobrando e você quer distribuí-lo de forma controlada entre os itens.
+                    </p>
+
+                    <p class="paragraph">
+                        O valor padrão é <code>0</code>, o que significa que o item não crescerá além do seu tamanho
+                        base. Ao atribuir valores maiores, você determina o quanto aquele item pode crescer em relação
+                        aos demais. Por exemplo, se um elemento tem <code>flex-grow: 2</code> e outro
+                        <code>flex-grow: 1</code>, o primeiro ocupará o dobro do espaço disponível em relação ao
+                        segundo.
+                    </p>
+
+                    <div class="container-example">
+
+                        <p class="container-example-title">Exemplo de flex-grow:</p>
+
+                        <div class="container-example-test">
+
+                            <div class="container-example-button">
+                                <p class="container-example-paragraph">flex-grow: <span id="span-flex-grow">1</span>
+                                </p>
+                                <button id="flex-grow-1">1</button>
+                                <button id="flex-grow-2">2</button>
+                                <button id="flex-grow-3">3</button>
+                            </div>
+
+                            <div id="div-flex-grow" class="container-example-work">
+                                <div id="box-flex-grow" class="box box-blue box-flex-grow">
+                                    <p>1</p>
+                                </div>
+                                <div class="box box-red box-flex-grow box-no-flex-grow">
+                                    <p>2</p>
                                 </div>
                             </div>
 
