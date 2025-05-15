@@ -124,3 +124,14 @@ flexShrinkOptions.forEach(shrink => {
         spanFlexShrink.textContent = shrink;
     });
 });
+
+const boxFlexBasis = document.getElementById("box-flex-basis");
+const spanFlexBasis = document.getElementById("span-flex-basis");
+const flexBasisOptions = ["25%", "50%", "75%"];
+
+flexBasisOptions.forEach(basis => {
+    document.getElementById(`flex-basis-${basis}`).addEventListener("click", () => {
+        boxFlexBasis.style.flexBasis = basis;
+        spanFlexBasis.textContent = basis;
+    });
+});

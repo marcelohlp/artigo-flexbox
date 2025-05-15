@@ -551,9 +551,9 @@
                                     </p>
                                 </div>
                                 <button id="order-html">padrão html</button>
-                                <button id="order-blue">azul primeiro</button>
-                                <button id="order-red">vermelho primeiro</button>
-                                <button id="order-green">verde primeiro</button>
+                                <button id="order-blue">azul vermelho verde</button>
+                                <button id="order-red">vermelho azul verde</button>
+                                <button id="order-green">verde azul vermelho</button>
                             </div>
 
                             <div id="div-order" class="container-example-work">
@@ -646,8 +646,7 @@
                         <div class="container-example-test">
 
                             <div class="container-example-button">
-                                <p class="container-example-paragraph">flex-shrink: <span
-                                        id="span-flex-shrink">1</span>
+                                <p class="container-example-paragraph">flex-shrink: <span id="span-flex-shrink">1</span>
                                 </p>
                                 <button id="flex-shrink-0">0</button>
                                 <button id="flex-shrink-1">1</button>
@@ -671,6 +670,66 @@
                         </div>
 
                     </div>
+
+                </section>
+
+                <section>
+
+                    <h3>Flex basis</h3>
+
+                    <p class="paragraph">
+                        Ao utilizar a propriedade <code>flex-basis</code>, estamos determinando qual será o
+                        <strong>tamanho base</strong> do elemento dentro do container flex. Esse valor define quanto
+                        espaço o item ocupará inicialmente, antes de qualquer ajuste feito pelas propriedades
+                        <code>flex-grow</code> ou <code>flex-shrink</code>.
+                    </p>
+
+                    <p class="paragraph">
+                        Ou seja, mesmo que o espaço entre os elementos seja redistribuído, o elemento com
+                        <code>flex-basis</code> definido terá como ponto de partida o valor informado. O valor padrão é
+                        <code>auto</code>, que geralmente corresponde ao tamanho do conteúdo interno ou ao valor de
+                        <code>width</code>.
+                    </p>
+
+                    <div class="container-example">
+
+                        <p class="container-example-title">Exemplo de flex-basis:</p>
+
+                        <div class="container-example-test">
+
+                            <div class="container-example-button">
+                                <p class="container-example-paragraph">flex-basis: <span id="span-flex-basis">25%</span>
+                                </p>
+                                <button id="flex-basis-25%">25%</button>
+                                <button id="flex-basis-50%">50%</button>
+                                <button id="flex-basis-75%">75%</button>
+                            </div>
+
+                            <div id="div-flex-basis" class="container-example-work">
+                                <div id="box-flex-basis" class="box box-blue">
+                                    <p>1</p>
+                                </div>
+                                <div class="box box-red">
+                                    <p>2</p>
+                                </div>
+                            </div>
+
+                        </div>
+
+                    </div>
+
+                </section>
+
+                <section>
+
+                    <h3>Flex</h3>
+
+                    <p class="paragraph">
+                        A propriedade <code>flex</code> é uma <em>shorthand</em> que resume o uso de três propriedades
+                        do Flexbox em uma única linha: <code>flex-grow</code>, <code>flex-shrink</code> e
+                        <code>flex-basis</code>, nessa ordem. Utilizar essa forma abreviada costuma ser mais prática e
+                        clara.
+                    </p>
 
                 </section>
 

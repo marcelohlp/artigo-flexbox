@@ -332,6 +332,18 @@ button:hover {
     aspect-ratio: unset;
 }
 
+#div-flex-basis{
+    justify-content: flex-start;
+    align-content: center;
+    gap: 1vw;
+}
+
+#box-flex-basis {
+    flex-shrink: 1;
+    height: 25%;
+    aspect-ratio: unset;
+}
+
 @media (min-width: 768px) {
 
     body {
