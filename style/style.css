@@ -3,7 +3,8 @@
     --background-color-secondary: #F0EBE3;
     --text-color: #181C14;
     --text_special-color: #41787A;
-    --button-color: #76ABAE; /*#41787A*/
+    --button-color: #76ABAE;
+    /*#41787A*/
     --color-blue: #4F8EF7;
     --color-red: #FF5C5C;
     --color-green: #3ED598;
@@ -52,19 +53,19 @@ aside {
     display: none;
 }
 
-h1 {
+h2 {
     font-size: 2.2em;
     margin: 1em 0;
     color: var(--text_special-color);
 }
 
-h2 {
+h3 {
     font-size: 1.5em;
     margin: 2em 0 1em 0;
     color: var(--text_special-color);
 }
 
-h3 {
+h4 {
     font-size: 1.1em;
     margin: 0 0 1em 0;
 }
@@ -75,12 +76,12 @@ p {
 }
 
 a:link {
-    color: var(--button-color);
+    color: var(--text_special-color);
     /* text-decoration: none; */
 }
 
 a:visited {
-    color: var(--button-color);
+    color: var(--text_special-color);
 }
 
 a:hover {
@@ -88,7 +89,7 @@ a:hover {
 }
 
 a:active {
-    background-color: var(--button-color);
+    background-color: var(--text_special-color);
     color: var(--background-color-secondary);
 }
 
@@ -177,8 +178,8 @@ button:hover {
 .box {
     color: var(--background-color-secondary);
     font-weight: bold;
-    width: 10vw;
-    height: 10vw;
+    flex: 0 0 25%;
+    aspect-ratio: 1 / 1;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -202,6 +203,20 @@ button:hover {
     background-color: var(--color-yellow);
 }
 
+.box-stretch {
+    height: 100%;
+    aspect-ratio: unset;
+}
+
+.box-no-stretch {
+    min-height: 25%;
+    aspect-ratio: unset;
+}
+
+.box-baseline {
+    padding: 10% 0 0 0;
+}
+
 .container-example-work {
     width: 60vw;
     height: 60vw;
@@ -222,13 +237,18 @@ button:hover {
     flex-direction: row;
 }
 
+#div-align-items {
+    justify-content: center;
+    align-items: stretch;
+}
+
 @media (min-width: 768px) {
 
     body {
         font-size: 16px;
     }
 
-    h2 {
+    h3 {
         font-size: 1.8em;
     }
 
@@ -253,12 +273,6 @@ button:hover {
     .container-example-work {
         width: 20vw;
         height: 20vw;
-    }
-
-
-    .box {
-        width: 5vw;
-        height: 5vw;
     }
 
 }

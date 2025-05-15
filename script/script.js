@@ -17,5 +17,16 @@ justifyContentOptions.forEach(justify => {
     document.getElementById(`justify-content-${justify}`).addEventListener("click", () => {
         divJustifyContent.style.justifyContent = justify;
         spanJustifyContent.textContent = justify;
-    })
-})
+    });
+});
+
+const divAlignItems = document.getElementById("div-align-items");
+const spanAlignItems = document.getElementById("span-align-items");
+const alignItemsOptions = ["stretch", "flex-start", "flex-end", "center", "baseline"]
+
+alignItemsOptions.forEach(align => {
+    document.getElementById(`align-items-${align}`).addEventListener("click", () => {
+        divAlignItems.style.alignItems = align;
+        spanAlignItems.textContent = align;
+    });
+});
