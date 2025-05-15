@@ -52,3 +52,19 @@ flexWrapOptions.forEach(wrap => {
         spanFlexWrap.textContent = wrap;
     })
 });
+
+const boxSelfAlign = document.getElementById("box-align-self");
+const spanSelfAlign = document.getElementById("span-align-self");
+const selfAlignOptions = ["auto", "flex-start", "flex-end", "center", "stretch"];
+
+selfAlignOptions.forEach(align => {
+    document.getElementById(`align-self-${align}`).addEventListener("click", () => {
+        boxSelfAlign.style.alignSelf = align;
+        if (align === "stretch") {
+            boxSelfAlign.style.aspectRatio = "unset";
+        } else {
+            boxSelfAlign.style.aspectRatio = "1 / 1"
+        };
+        spanSelfAlign.textContent = align;
+    })
+})

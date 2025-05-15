@@ -255,12 +255,24 @@ button:hover {
     gap: 1vw;
 }
 
-#div-flex-wrap{
+#div-flex-wrap {
     justify-content: flex-start;
     flex-direction: row;
     align-content: center;
     flex-wrap: nowrap;
     gap: 1vw;
+}
+
+#div-align-self {
+    justify-content: center;
+    flex-direction: row;
+    align-content: center;
+    flex-wrap: nowrap;
+    gap: 1vw;
+}
+
+#box-align-self {
+    align-self: auto;
 }
 
 @media (min-width: 768px) {

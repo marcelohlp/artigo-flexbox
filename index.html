@@ -15,409 +15,509 @@
 
 <body>
 
-    <header class="header">
 
-        <h2>Flexbox: uma poderosa ferramenta na construção de layouts</h2>
-
-        <p>
-            Por <a href="https://www.linkedin.com/in/marcelo-hpaschoal/" class="anchor">Marcelo Paschoal</a>,
-            16 de maio de 2025.
-        </p>
-
-    </header>
 
     <main>
 
-        <article>
+        <div>
 
-            <section>
+            <header class="header">
 
-                <h3>O que é flexbox?</h3>
+                <h2>Flexbox: uma poderosa ferramenta na construção de layouts</h2>
 
-                <p class="paragraph">
-                    O <strong>Flexbox</strong> é um modelo de layout em <strong>CSS</strong> que facilita a criação de
-                    interfaces mais flexíveis e adaptáveis. Ele permite organizar elementos de
-                    forma <strong>unidimensional</strong> — em linha ou em coluna — dentro de um <em>flex
-                        container</em>, ou
-                    seja, um contêiner que utiliza o Flexbox para controlar diretamente a distribuição de seus elementos
-                    filhos. Com ele, é possível definir com facilidade o <strong>alinhamento</strong>, o
-                    <strong>tamanho</strong>, o <strong>espaçamento</strong> e a <strong>ordem</strong> dos itens, o que
-                    contribui para layouts mais limpos e eficientes em diferentes tamanhos de tela. O Flexbox também
-                    veio
-                    para simplificar práticas antigas de criação de layout baseadas em propriedades como
-                    <code>float</code>
-                    e <code>position</code>, oferecendo uma solução mais intuitiva e poderosa. Para utilizá-lo, basta
-                    aplicar <code>display: flex</code> ao elemento contêiner.
+                <p>
+                    Por <a href="https://www.linkedin.com/in/marcelo-hpaschoal/" class="anchor">Marcelo Paschoal</a>,
+                    16 de maio de 2025.
                 </p>
 
-            </section>
+            </header>
 
-            <section class="section-flex-direction">
+            <article>
 
-                <h3>Conceitos fundamentais do Flexbox</h3>
+                <section>
 
-                <p class="paragraph">
-                    Mas antes de continuarmos, precisamos definir alguns conceitos importantes que nos auxiliarão no
-                    decorrer deste artigo. Entender como funcionam o <strong>main axis</strong>, <strong>cross
-                        axis</strong>, <strong>main size</strong>, <strong>cross size</strong>, <strong>main
-                        start</strong>, <strong>main end</strong>, <strong>cross start</strong> e <strong>cross
-                        end</strong> é fundamental para aplicar corretamente as principais propriedades do Flexbox. A
-                    seguir, apresentamos a explicação de cada um deles.
-                </p>
+                    <h3>O que é flexbox?</h3>
 
-                <ul>
-                    <li>
-                        <h4>Eixos (Axis)</h4>
-                        <p class="paragraph">
-                            O <strong>main axis</strong> é o eixo principal no qual os elementos filhos do contêiner
-                            flex são
-                            dispostos, variando de acordo com a direção definida — em linha ou em coluna. Ele não está
-                            relacionado
-                            diretamente às orientações horizontal ou vertical, mas sim à propriedade
-                            <code>flex-direction</code>,
-                            que abordaremos mais à frente. O <strong>cross axis</strong>, por outro lado, é o eixo
-                            perpendicular
-                            ao
-                            <em>main axis</em>, sendo fundamental para compreender o alinhamento dos elementos filhos
-                            por meio
-                            da
-                            propriedade <code>align-items</code>.
-                        </p>
-                    </li>
-                    <li>
-                        <h4>Tamanho (Size)</h4>
-                        <p class="paragraph">
-                            O <strong>main size</strong> é o tamanho total do contêiner flex em relação ao <strong>main
-                                axis</strong>, enquanto o <strong>cross size</strong> é o tamanho total do contêiner
-                            flex em
-                            relação
-                            ao <strong>cross axis</strong>.
-                        </p>
-                    </li>
-                    <li>
-                        <h4>Início e fim do contêiner (Start and End)</h4>
-                        <p class="paragraph">
-                            Tanto o <strong>main start</strong> quanto o <strong>cross start</strong> definem o início
-                            de um
-                            contêiner em relação ao eixo principal ou ao eixo perpendicular. Por outro lado, o
-                            <strong>main
-                                end</strong> e o <strong>cross end</strong> delimitam o fim do contêiner em relação a
-                            esses
-                            eixos.
-                        </p>
-                    </li>
-                </ul>
+                    <p class="paragraph">
+                        O <strong>Flexbox</strong> é um modelo de layout em <strong>CSS</strong> que facilita a criação
+                        de
+                        interfaces mais flexíveis e adaptáveis. Ele permite organizar elementos de forma
+                        <strong>unidimensional</strong> — em linha ou em coluna — dentro de um <em>flex container</em>,
+                        ou
+                        seja, um contêiner que utiliza o Flexbox para controlar diretamente a distribuição de seus
+                        elementos
+                        filhos. Com ele, é possível definir com facilidade o <strong>alinhamento</strong>, o
+                        <strong>tamanho</strong>, o <strong>espaçamento</strong> e a <strong>ordem</strong> dos itens, o
+                        que
+                        contribui para layouts mais limpos e eficientes em diferentes tamanhos de tela. O Flexbox também
+                        veio para simplificar práticas antigas de criação de layout baseadas em propriedades como
+                        <code>float</code> e <code>position</code>, oferecendo uma solução mais intuitiva e poderosa.
+                        Para
+                        utilizá-lo, basta aplicar <code>display: flex</code> ao elemento contêiner.
+                    </p>
 
-            </section>
+                </section>
 
-            <section class="section-flex-direction">
+                <section class="section-flex-direction">
 
-                <h3>Flex direction</h3>
+                    <h3>Conceitos fundamentais do Flexbox</h3>
 
-                <p class="paragraph">
-                    A propriedade <code>flex-direction</code> é <strong>responsável por definir a direção</strong> dos
-                    elementos filhos dentro do container flex. Ao alternar seus valores, é possível organizar os
-                    elementos
-                    <em>em linha</em>, com o primeiro elemento à esquerda utilizando <code>row</code>, ou de forma
-                    invertida com <code>row-reverse</code>. Também é possível dispor os elementos <em>em coluna</em> com
-                    <code>column</code>, sendo exibidos de cima para baixo, ou de forma invertida com
-                    <code>column-reverse</code>.
-                </p>
+                    <p class="paragraph">
+                        Mas antes de continuarmos, precisamos definir alguns conceitos importantes que nos auxiliarão no
+                        decorrer deste artigo. Entender como funcionam o <strong>main axis</strong>, <strong>cross
+                            axis</strong>, <strong>main size</strong>, <strong>cross size</strong>, <strong>main
+                            start</strong>, <strong>main end</strong>, <strong>cross start</strong> e <strong>cross
+                            end</strong> é fundamental para aplicar corretamente as principais propriedades do Flexbox.
+                        A
+                        seguir, apresentamos a explicação de cada um deles.
+                    </p>
 
-                <div class="container-example">
-
-                    <p class="container-example-title">Exemplo de flex-direction:</p>
-
-                    <div class="container-example-test">
-
-                        <div class="container-example-button">
-                            <p class="container-example-paragraph">flex-direction: <span
-                                    id="span-flex-direction">row</span>
+                    <ul>
+                        <li>
+                            <h4>Eixos (Axis)</h4>
+                            <p class="paragraph">
+                                O <strong>main axis</strong> é o eixo principal no qual os elementos filhos do contêiner
+                                flex são dispostos, variando de acordo com a direção definida — em linha ou em coluna.
+                                Ele
+                                não está relacionado diretamente às orientações horizontal ou vertical, mas sim à
+                                propriedade <code>flex-direction</code>, que abordaremos mais à frente. O <strong>cross
+                                    axis</strong>, por outro lado, é o eixo perpendicular ao <em>main axis</em>, sendo
+                                fundamental para compreender o alinhamento dos elementos filhos por meio da propriedade
+                                <code>align-items</code>.
                             </p>
-                            <button id="flex-direction-row">row</button>
-                            <button id="flex-direction-row-reverse">row-reverse</button>
-                            <button id="flex-direction-column">column</button>
-                            <button id="flex-direction-column-reverse">column-reverse</button>
-                        </div>
+                        </li>
+                        <li>
+                            <h4>Tamanho (Size)</h4>
+                            <p class="paragraph">
+                                O <strong>main size</strong> é o tamanho total do contêiner flex em relação ao
+                                <strong>main
+                                    axis</strong>, enquanto o <strong>cross size</strong> é o tamanho total do contêiner
+                                flex em relação ao <strong>cross axis</strong>.
+                            </p>
+                        </li>
+                        <li>
+                            <h4>Início e fim do contêiner (Start and End)</h4>
+                            <p class="paragraph">
+                                Tanto o <strong>main start</strong> quanto o <strong>cross start</strong> definem o
+                                início
+                                de um contêiner em relação ao eixo principal ou ao eixo perpendicular. Por outro lado, o
+                                <strong>main end</strong> e o <strong>cross end</strong> delimitam o fim do contêiner em
+                                relação a esses eixos.
+                            </p>
+                        </li>
+                    </ul>
 
-                        <div id="div-flex-direction" class="container-example-work">
-                            <div class="box box-blue">
-                                <p>1</p>
+                </section>
+
+                <section class="section-flex-direction">
+
+                    <h3>Flex direction</h3>
+
+                    <p class="paragraph">
+                        A propriedade <code>flex-direction</code> é <strong>responsável por definir a direção</strong>
+                        dos
+                        elementos filhos dentro do container flex. Ao alternar seus valores, é possível organizar os
+                        elementos <em>em linha</em>, com o primeiro elemento à esquerda utilizando <code>row</code>, ou
+                        de
+                        forma invertida com <code>row-reverse</code>. Também é possível dispor os elementos <em>em
+                            coluna</em> com <code>column</code>, sendo exibidos de cima para baixo, ou de forma
+                        invertida
+                        <code>column-reverse</code>.
+                    </p>
+
+                    <div class="container-example">
+
+                        <p class="container-example-title">Exemplo de flex-direction:</p>
+
+                        <div class="container-example-test">
+
+                            <div class="container-example-button">
+                                <p class="container-example-paragraph">flex-direction: <span
+                                        id="span-flex-direction">row</span>
+                                </p>
+                                <button id="flex-direction-row">row</button>
+                                <button id="flex-direction-row-reverse">row-reverse</button>
+                                <button id="flex-direction-column">column</button>
+                                <button id="flex-direction-column-reverse">column-reverse</button>
                             </div>
-                            <div class="box box-red">
-                                <p>2</p>
+
+                            <div id="div-flex-direction" class="container-example-work">
+                                <div class="box box-blue">
+                                    <p>1</p>
+                                </div>
+                                <div class="box box-red">
+                                    <p>2</p>
+                                </div>
+                                <div class="box box-green">
+                                    <p>3</p>
+                                </div>
                             </div>
-                            <div class="box box-green">
-                                <p>3</p>
-                            </div>
+
                         </div>
 
                     </div>
 
-                </div>
+                </section>
 
-            </section>
+                <section class="section-flex-direction">
 
-            <section class="section-flex-direction">
+                    <h3>Justify content</h3>
 
-                <h3>Justify content</h3>
+                    <p class="paragraph">
+                        A propriedade <code>justify-content</code> é responsável por <strong>alinhar o conteúdo de um
+                            container ao longo de seu main axis</strong>, definindo como os elementos serão distribuídos
+                        nesse eixo. Ao utilizarmos essa propriedade, temos algumas opções bem interessantes. Com o valor
+                        <code>flex-start</code>, os itens são agrupados no início do <em>main axis</em> (também chamado
+                        de
+                        <em>main start</em>). Já com <code>flex-end</code>, temos o comportamento oposto, com os
+                        elementos
+                        agrupados no final (<em>main end</em>). Quando usamos <code>center</code>, os itens são
+                        centralizados ao longo do eixo principal.
+                    </p>
 
-                <p class="paragraph">
-                    A propriedade <code>justify-content</code> é responsável por <strong>alinhar o conteúdo de um
-                        container ao
-                        longo de seu main axis</strong>, definindo como os elementos serão distribuídos nesse eixo. Ao
-                    utilizarmos essa propriedade, temos algumas opções bem interessantes. Com o valor
-                    <code>flex-start</code>, os itens são agrupados no início do <em>main axis</em> (também chamado de
-                    <em>main start</em>). Já com <code>flex-end</code>, temos o comportamento oposto, com os elementos
-                    agrupados no final (<em>main end</em>). Quando usamos <code>center</code>, os itens são
-                    centralizados ao longo do eixo principal.
-                </p>
-
-                <p class="paragraph">
-                    Mas essas não são as únicas opções. Também é possível definir espaçamentos entre os elementos do
-                    container. Com <code>space-between</code>, todos os itens são separados por espaços iguais, sendo
-                    que o primeiro fica encostado no <em>main start</em> e o último no <em>main end</em>. Com
-                    <code>space-around</code>, todos os itens recebem o mesmo espaçamento dos dois lados, o que resulta
-                    em um espaço duplo entre os elementos internos e um espaço simples nas extremidades. Por fim, com
-                    <code>space-evenly</code>, garantimos que os elementos tenham exatamente os mesmos
-                    espaços entre si e também entre as bordas do container.
-                </p>
+                    <p class="paragraph">
+                        Mas essas não são as únicas opções. Também é possível definir espaçamentos entre os elementos do
+                        container. Com <code>space-between</code>, todos os itens são separados por espaços iguais,
+                        sendo
+                        que o primeiro fica encostado no <em>main start</em> e o último no <em>main end</em>. Com
+                        <code>space-around</code>, todos os itens recebem o mesmo espaçamento dos dois lados, o que
+                        resulta
+                        em um espaço duplo entre os elementos internos e um espaço simples nas extremidades. Por fim,
+                        com
+                        <code>space-evenly</code>, garantimos que os elementos tenham exatamente os mesmos
+                        espaços entre si e também entre as bordas do container.
+                    </p>
 
 
-                <div class="container-example">
+                    <div class="container-example">
 
-                    <p class="container-example-title">Exemplo de justify-content:</p>
+                        <p class="container-example-title">Exemplo de justify-content:</p>
 
-                    <div class="container-example-test">
+                        <div class="container-example-test">
 
-                        <div class="container-example-button">
-                            <p class="container-example-paragraph">justify-content: <span
-                                    id="span-justify-content">flex-start</span>
-                            </p>
-                            <button id="justify-content-flex-start">flex-start</button>
-                            <button id="justify-content-flex-end">flex-end</button>
-                            <button id="justify-content-center">center</button>
-                            <button id="justify-content-space-between">space-between</button>
-                            <button id="justify-content-space-around">space-around</button>
-                            <button id="justify-content-space-evenly">space-evenly</button>
-                        </div>
-
-                        <div id="div-justify-content" class="container-example-work">
-                            <div class="box box-blue">
-                                <p>1</p>
+                            <div class="container-example-button">
+                                <p class="container-example-paragraph">justify-content: <span
+                                        id="span-justify-content">flex-start</span>
+                                </p>
+                                <button id="justify-content-flex-start">flex-start</button>
+                                <button id="justify-content-flex-end">flex-end</button>
+                                <button id="justify-content-center">center</button>
+                                <button id="justify-content-space-between">space-between</button>
+                                <button id="justify-content-space-around">space-around</button>
+                                <button id="justify-content-space-evenly">space-evenly</button>
                             </div>
-                            <div class="box box-red">
-                                <p>2</p>
+
+                            <div id="div-justify-content" class="container-example-work">
+                                <div class="box box-blue">
+                                    <p>1</p>
+                                </div>
+                                <div class="box box-red">
+                                    <p>2</p>
+                                </div>
+                                <div class="box box-green">
+                                    <p>3</p>
+                                </div>
                             </div>
-                            <div class="box box-green">
-                                <p>3</p>
-                            </div>
-                        </div>
 
-                    </div>
-
-                </div>
-
-            </section>
-
-            <section class="section-flex-direction">
-
-                <h3>Align items</h3>
-
-                <p class="paragraph">
-                    Com a propriedade <code>align-items</code>, conseguimos definir como os elementos filhos de um
-                    container flex serão alinhados ao longo do <em>cross axis</em> (eixo perpendicular ao <em>main
-                        axis</em>). Por padrão, um container flex já possui essa propriedade definida como
-                    <code>stretch</code>, fazendo com que todos os elementos filhos ocupem automaticamente todo o espaço
-                    disponível no <em>cross axis</em>, esticando-se para igualar a altura (ou largura, dependendo da
-                    direção do flex).
-                </p>
-
-                <p class="paragraph">
-                    Esse comportamento pode ser ajustado com outros valores, dependendo da necessidade do layout. Com
-                    <code>center</code>, os itens são centralizados ao longo do <em>cross axis</em>. Se quisermos que os
-                    itens fiquem alinhados ao início ou ao fim desse eixo, usamos <code>flex-start</code> ou
-                    <code>flex-end</code>, respectivamente. Também é possível alinhar os elementos com base na linha de
-                    base de seu conteúdo textual utilizando o valor <strong><code>baseline</code></strong>. Ao aplicar
-                    qualquer um desses valores, o comportamento <code>stretch</code> é desativado, e os itens passam a
-                    ocupar apenas o espaço necessário no <em>cross axis</em>.
-                </p>
-
-
-                <div class="container-example">
-
-                    <p class="container-example-title">Exemplo de align-items:</p>
-
-                    <div class="container-example-test">
-
-                        <div class="container-example-button">
-                            <p class="container-example-paragraph">align-items: <span
-                                    id="span-align-items">stretch</span>
-                            </p>
-                            <button id="align-items-stretch">stretch</button>
-                            <button id="align-items-flex-start">flex-start</button>
-                            <button id="align-items-flex-end">flex-end</button>
-                            <button id="align-items-center">center</button>
-                            <button id="align-items-baseline">baseline</button>
-                        </div>
-
-                        <div id="div-align-items" class="container-example-work">
-                            <div class="box box-blue box-stretch">
-                                <p>1</p>
-                            </div>
-                            <div class="box box-red box-no-stretch">
-                                <p>2</p>
-                            </div>
-                            <div class="box box-green box-no-stretch box-baseline">
-                                <p>3</p>
-                            </div>
                         </div>
 
                     </div>
 
-                </div>
+                </section>
 
-            </section>
+                <section class="section-flex-direction">
 
-            <section class="section-flex-direction">
+                    <h3>Align items</h3>
 
-                <h3>Align content</h3>
+                    <p class="paragraph">
+                        Com a propriedade <code>align-items</code>, conseguimos definir como os elementos filhos de um
+                        container flex serão alinhados ao longo do <em>cross axis</em> (eixo perpendicular ao <em>main
+                            axis</em>). Por padrão, um container flex já possui essa propriedade definida como
+                        <code>stretch</code>, fazendo com que todos os elementos filhos ocupem automaticamente todo o
+                        espaço
+                        disponível no <em>cross axis</em>, esticando-se para igualar a altura (ou largura, dependendo da
+                        direção do flex).
+                    </p>
 
-                <p class="paragraph">
-                    A propriedade <code>align-content</code>, por sua vez, não organiza os elementos individualmente em
-                    relação ao <em>cross axis</em>, mas sim as <strong>linhas do container flex</strong>. O valor padrão
-                    é
-                    <code>stretch</code>, que funciona de maneira semelhante ao <code>align-items</code>, esticando as
-                    linhas para ocupar todo o espaço disponível no container. No entanto, essa propriedade só tem efeito
-                    quando o container possui múltiplas linhas, o que exige a aplicação da propriedade
-                    <code>flex-wrap</code> que será abordada mais a frente.
-                </p>
-
-                <p class="paragraph">
-                    Os valores <code>flex-start</code>, <code>flex-end</code> e <code>center</code> também funcionam de
-                    forma parecida com o <code>align-items</code>, mas aplicam o alinhamento às linhas do container, e
-                    não
-                    diretamente aos seus elementos. Além disso, dois novos valores são específicos dessa propriedade:
-                    <code>space-between</code>, que distribui as linhas igualmente, deixando a primeira encostada no
-                    <em>cross start</em> e a última no <em>cross end</em>; e <code>space-around</code>, que
-                    distribui as linhas com espaços iguais ao redor de cada uma, criando margens entre todas as linhas e
-                    também entre as extremidades do container.
-                </p>
+                    <p class="paragraph">
+                        Esse comportamento pode ser ajustado com outros valores, dependendo da necessidade do layout.
+                        Com
+                        <code>center</code>, os itens são centralizados ao longo do <em>cross axis</em>. Se quisermos
+                        que os
+                        itens fiquem alinhados ao início ou ao fim desse eixo, usamos <code>flex-start</code> ou
+                        <code>flex-end</code>, respectivamente. Também é possível alinhar os elementos com base na linha
+                        de
+                        base de seu conteúdo textual utilizando o valor <strong><code>baseline</code></strong>. Ao
+                        aplicar
+                        qualquer um desses valores, o comportamento <code>stretch</code> é desativado, e os itens passam
+                        a
+                        ocupar apenas o espaço necessário no <em>cross axis</em>.
+                    </p>
 
 
+                    <div class="container-example">
 
-                <div class="container-example">
+                        <p class="container-example-title">Exemplo de align-items:</p>
 
-                    <p class="container-example-title">Exemplo de align-content:</p>
+                        <div class="container-example-test">
 
-                    <div class="container-example-test">
-
-                        <div class="container-example-button">
-                            <p class="container-example-paragraph">align-content: <span
-                                    id="span-align-content">stretch</span>
-                            </p>
-                            <button id="align-content-stretch">stretch</button>
-                            <button id="align-content-flex-start">flex-start</button>
-                            <button id="align-content-flex-end">flex-end</button>
-                            <button id="align-content-center">center</button>
-                            <button id="align-content-space-between">space-between</button>
-                            <button id="align-content-space-around">space-around</button>
-                        </div>
-
-                        <div id="div-align-content" class="container-example-work">
-                            <div class="box box-blue">
-                                <p>1</p>
+                            <div class="container-example-button">
+                                <p class="container-example-paragraph">align-items: <span
+                                        id="span-align-items">stretch</span>
+                                </p>
+                                <button id="align-items-stretch">stretch</button>
+                                <button id="align-items-flex-start">flex-start</button>
+                                <button id="align-items-flex-end">flex-end</button>
+                                <button id="align-items-center">center</button>
+                                <button id="align-items-baseline">baseline</button>
                             </div>
-                            <div class="box box-red">
-                                <p>2</p>
+
+                            <div id="div-align-items" class="container-example-work">
+                                <div class="box box-blue box-stretch">
+                                    <p>1</p>
+                                </div>
+                                <div class="box box-red box-no-stretch">
+                                    <p>2</p>
+                                </div>
+                                <div class="box box-green box-no-stretch box-baseline">
+                                    <p>3</p>
+                                </div>
                             </div>
-                            <div class="box box-green">
-                                <p>3</p>
-                            </div>
-                            <div class="box box-yellow">
-                                <p>4</p>
-                            </div>
-                            <div class="box box-purple">
-                                <p>5</p>
-                            </div>
+
                         </div>
 
                     </div>
 
-                </div>
+                </section>
 
-            </section>
+                <section class="section-flex-direction">
 
-            <section class="section-flex-direction">
+                    <h3>Align content</h3>
 
-                <h3>Flex wrap</h3>
+                    <p class="paragraph">
+                        A propriedade <code>align-content</code>, por sua vez, não organiza os elementos individualmente
+                        em
+                        relação ao <em>cross axis</em>, mas sim as <strong>linhas do container flex</strong>. O valor
+                        padrão
+                        é <code>stretch</code>, que funciona de maneira semelhante ao <code>align-items</code>,
+                        esticando as
+                        linhas para ocupar todo o espaço disponível no container. No entanto, essa propriedade só tem
+                        efeito
+                        quando o container possui múltiplas linhas, o que exige a aplicação da propriedade
+                        <code>flex-wrap</code> que será abordada mais a frente.
+                    </p>
 
-                <p class="paragraph">
-                    Caso o conjunto de elementos dentro de um container flex seja muito grande, podemos enfrentar o
-                    problema de <em>"estouro"</em> dos limites do container. Quando isso ocorre, podemos usar a
-                    propriedade <code>flex-wrap</code>, que permite a quebra de linha entre os elementos do container.
-                </p>
+                    <p class="paragraph">
+                        Os valores <code>flex-start</code>, <code>flex-end</code> e <code>center</code> também funcionam
+                        de
+                        forma parecida com o <code>align-items</code>, mas aplicam o alinhamento às linhas do container,
+                        e
+                        não diretamente aos seus elementos. Além disso, dois novos valores são específicos dessa
+                        propriedade: <code>space-between</code>, que distribui as linhas igualmente, deixando a primeira
+                        encostada no <em>cross start</em> e a última no <em>cross end</em>; e <code>space-around</code>,
+                        que
+                        distribui as linhas com espaços iguais ao redor de cada uma, criando margens entre todas as
+                        linhas e
+                        também entre as extremidades do container.
+                    </p>
 
-                <p class="paragraph">
-                    O valor padrão é <code>nowrap</code>, ou seja, todos os elementos permanecem em uma única linha,
-                    mesmo que ultrapassem os limites do container. Podemos alterar esse comportamento com o valor
-                    <code>wrap</code>, que permite a quebra de linha e faz com que os itens fluam para linhas
-                    subsequentes. Há também o valor <code>wrap-reverse</code>, que aplica a quebra
-                    de linha invertendo a direção em que as novas linhas são adicionadas.
-                </p>
 
 
-                <div class="container-example">
+                    <div class="container-example">
 
-                    <p class="container-example-title">Exemplo de flex-wrap:</p>
+                        <p class="container-example-title">Exemplo de align-content:</p>
 
-                    <div class="container-example-test">
+                        <div class="container-example-test">
 
-                        <div class="container-example-button">
-                            <p class="container-example-paragraph">flex-wrap: <span id="span-flex-wrap">nowrap</span>
-                            </p>
-                            <button id="flex-wrap-nowrap">nowrap</button>
-                            <button id="flex-wrap-wrap">wrap</button>
-                            <button id="flex-wrap-wrap-reverse">wrap-reverse</button>
-                        </div>
-
-                        <div id="div-flex-wrap" class="container-example-work">
-                            <div class="box box-blue">
-                                <p>1</p>
+                            <div class="container-example-button">
+                                <p class="container-example-paragraph">align-content: <span
+                                        id="span-align-content">stretch</span>
+                                </p>
+                                <button id="align-content-stretch">stretch</button>
+                                <button id="align-content-flex-start">flex-start</button>
+                                <button id="align-content-flex-end">flex-end</button>
+                                <button id="align-content-center">center</button>
+                                <button id="align-content-space-between">space-between</button>
+                                <button id="align-content-space-around">space-around</button>
                             </div>
-                            <div class="box box-red">
-                                <p>2</p>
+
+                            <div id="div-align-content" class="container-example-work">
+                                <div class="box box-blue">
+                                    <p>1</p>
+                                </div>
+                                <div class="box box-red">
+                                    <p>2</p>
+                                </div>
+                                <div class="box box-green">
+                                    <p>3</p>
+                                </div>
+                                <div class="box box-yellow">
+                                    <p>4</p>
+                                </div>
+                                <div class="box box-purple">
+                                    <p>5</p>
+                                </div>
                             </div>
-                            <div class="box box-green">
-                                <p>3</p>
-                            </div>
-                            <div class="box box-yellow">
-                                <p>4</p>
-                            </div>
+
                         </div>
 
                     </div>
 
-                </div>
+                </section>
 
-                <p class="paragraph">
-                    Há também outra maneira de aplicar a quebra de linhas ao mesmo tempo em que definimos a direção do
-                    container: por meio da propriedade <code>flex-flow</code>. Essa é uma <em>shorthand</em> que combina
-                    as propriedades <code>flex-direction</code> e <code>flex-wrap</code> em uma única linha.
-                </p>
+                <section class="section-flex-direction">
 
-                <p class="paragraph">
-                    Alguns dos valores possíveis incluem: <code>row nowrap</code>, que define a direção principal como
-                    horizontal e impede a quebra de linha; <code>row wrap</code>, que mantém a direção horizontal, mas
-                    permite a quebra de linha; <code>column nowrap</code>, que organiza os itens verticalmente sem
-                    quebra; e <code>column wrap</code>, que organiza os itens em coluna e permite a
-                    quebra para novas colunas quando necessário.
-                </p>
+                    <h3>Flex wrap</h3>
+
+                    <p class="paragraph">
+                        Caso o conjunto de elementos dentro de um container flex seja muito grande, podemos enfrentar o
+                        problema de <em>"estouro"</em> dos limites do container. Quando isso ocorre, podemos usar a
+                        propriedade <code>flex-wrap</code>, que permite a quebra de linha entre os elementos do
+                        container.
+                    </p>
+
+                    <p class="paragraph">
+                        O valor padrão é <code>nowrap</code>, ou seja, todos os elementos permanecem em uma única linha,
+                        mesmo que ultrapassem os limites do container. Podemos alterar esse comportamento com o valor
+                        <code>wrap</code>, que permite a quebra de linha e faz com que os itens fluam para linhas
+                        subsequentes. Há também o valor <code>wrap-reverse</code>, que aplica a quebra
+                        de linha invertendo a direção em que as novas linhas são adicionadas.
+                    </p>
 
 
-            </section>
+                    <div class="container-example">
 
-        </article>
+                        <p class="container-example-title">Exemplo de flex-wrap:</p>
+
+                        <div class="container-example-test">
+
+                            <div class="container-example-button">
+                                <p class="container-example-paragraph">flex-wrap: <span
+                                        id="span-flex-wrap">nowrap</span>
+                                </p>
+                                <button id="flex-wrap-nowrap">nowrap</button>
+                                <button id="flex-wrap-wrap">wrap</button>
+                                <button id="flex-wrap-wrap-reverse">wrap-reverse</button>
+                            </div>
+
+                            <div id="div-flex-wrap" class="container-example-work">
+                                <div class="box box-blue">
+                                    <p>1</p>
+                                </div>
+                                <div class="box box-red">
+                                    <p>2</p>
+                                </div>
+                                <div class="box box-green">
+                                    <p>3</p>
+                                </div>
+                                <div class="box box-yellow">
+                                    <p>4</p>
+                                </div>
+                            </div>
+
+                        </div>
+
+                    </div>
+
+                    <p class="paragraph">
+                        Há também outra maneira de aplicar a quebra de linhas ao mesmo tempo em que definimos a direção
+                        do
+                        container: por meio da propriedade <code>flex-flow</code>. Essa é uma <em>shorthand</em> que
+                        combina
+                        as propriedades <code>flex-direction</code> e <code>flex-wrap</code> em uma única linha.
+                    </p>
+
+                    <p class="paragraph">
+                        Alguns dos valores possíveis incluem: <code>row nowrap</code>, que define a direção principal
+                        como
+                        horizontal e impede a quebra de linha; <code>row wrap</code>, que mantém a direção horizontal,
+                        mas
+                        permite a quebra de linha; <code>column nowrap</code>, que organiza os itens verticalmente sem
+                        quebra; e <code>column wrap</code>, que organiza os itens em coluna e permite a
+                        quebra para novas colunas quando necessário.
+                    </p>
+
+
+                </section>
+
+                <section class="section-flex-direction">
+
+                    <h3>Sabia que podemos alterar o comportamento dos elementos filhos?</h3>
+
+                    <p class="paragraph">
+                        Podemos criar layouts muito mais interessantes se aplicarmos os conceitos do Flexbox não apenas
+                        no
+                        container, mas também em seus elementos filhos. Com algumas propriedades como
+                        <code>align-self</code>, <code>order</code>, <code>flex-grow</code>, <code>flex-shrink</code> e
+                        <code>order</code>, podemos alterar a forma como esses elementos reagem em relação ao container,
+                        criando visuais únicos que podem fazer total diferença no design do seu site.
+                    </p>
+
+
+                </section>
+
+                <section class="section-flex-direction">
+
+                    <h3>Align self</h3>
+
+                    <p class="paragraph">
+                        Sabemos que alguns filhos gostam de ser rebeldes e ir na contramão do que está sendo proposto
+                        pelos
+                        seus “pais” — e com o Flexbox não é diferente! Quando definimos o alinhamento com
+                        <code>align-items</code>, estamos estabelecendo a posição padrão dos itens em relação ao
+                        container
+                        flex. No entanto, cada elemento pode ajustar seu próprio posicionamento individual utilizando a
+                        propriedade <code>align-self</code>.
+                    </p>
+
+                    <p class="paragraph">
+                        Entre os valores disponíveis para <code>align-self</code>, temos <code>auto</code>, que
+                        determina
+                        automaticamente a posição do elemento com base na configuração do container. Além disso, é
+                        possível
+                        usar os mesmos valores apresentados anteriormente na seção de <code>align-items</code>, como
+                        <code>flex-start</code>, <code>flex-end</code>, <code>center</code> e <code>stretch</code>.
+                    </p>
+
+
+                    <div class="container-example">
+
+                        <p class="container-example-title">Exemplo de align-self:</p>
+
+                        <div class="container-example-test">
+
+                            <div class="container-example-button">
+                                <p class="container-example-paragraph">align-self: <span
+                                        id="span-align-self">auto</span>
+                                </p>
+                                <button id="align-self-auto">auto</button>
+                                <button id="align-self-flex-start">flex-start</button>
+                                <button id="align-self-flex-end">flex-end</button>
+                                <button id="align-self-center">center</button>
+                                <button id="align-self-stretch">stretch</button>
+                            </div>
+
+                            <div id="div-align-self" class="container-example-work">
+                                <div id="box-align-self" class="box box-blue">
+                                    <p>1</p>
+                                </div>
+                                <div class="box box-red">
+                                    <p>2</p>
+                                </div>
+                                <div class="box box-green">
+                                    <p>3</p>
+                                </div>
+                            </div>
+
+                        </div>
+
+                    </div>
+
+                </section>
+
+            </article>
+
+        </div>
 
         <aside>
 
