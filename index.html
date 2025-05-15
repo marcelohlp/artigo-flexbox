@@ -623,6 +623,57 @@
 
                 </section>
 
+                <section>
+
+                    <h3>Flex shrink</h3>
+
+                    <p class="paragraph">
+                        A propriedade <code>flex-shrink</code> define se um elemento filho pode encolher quando o espaço
+                        no container flex for insuficiente. Por padrão, seu valor é <code>1</code>, o que significa que
+                        os elementos podem diminuir de tamanho para se ajustarem ao espaço disponível.
+                    </p>
+
+                    <p class="paragraph">
+                        Para evitar que um item encolha, podemos definir <code>flex-shrink</code> como <code>0</code>.
+                        Assim, ele manterá seu tamanho base, mesmo que isso provoque o "estouro" do layout ou o
+                        aparecimento de rolagem.
+                    </p>
+
+                    <div class="container-example">
+
+                        <p class="container-example-title">Exemplo de flex-shrink:</p>
+
+                        <div class="container-example-test">
+
+                            <div class="container-example-button">
+                                <p class="container-example-paragraph">flex-shrink: <span
+                                        id="span-flex-shrink">1</span>
+                                </p>
+                                <button id="flex-shrink-0">0</button>
+                                <button id="flex-shrink-1">1</button>
+                            </div>
+
+                            <div id="div-flex-shrink" class="container-example-work">
+                                <div class="box box-blue box-flex-shrink">
+                                    <p>1</p>
+                                </div>
+                                <div class="box box-red box-flex-shrink">
+                                    <p>2</p>
+                                </div>
+                                <div class="box box-green box-flex-shrink">
+                                    <p>3</p>
+                                </div>
+                                <div id="box-flex-shirink" class="box box-yellow box-flex-shrink">
+                                    <p>4</p>
+                                </div>
+                            </div>
+
+                        </div>
+
+                    </div>
+
+                </section>
+
             </article>
 
         </div>

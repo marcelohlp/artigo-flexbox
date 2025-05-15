@@ -114,11 +114,13 @@ flexGrowOptions.forEach(grow => {
     });
 });
 
-/*<div class="container-example-button">
-                                <p class="container-example-paragraph">flex-grow: <span id="span-flex-grow">0</span>
-                                </p>
-                                <button id="flex-grow-zero">0</button>
-                                <button id="flex-grow-one">1</button>
-                                <button id="flex-grow-two">2</button>
-                                <button id="flex-grow-three">3</button>
-                            </div>*/
+const boxFlexShrink = document.getElementById("box-flex-shirink");
+const spanFlexShrink = document.getElementById("span-flex-shrink");
+const flexShrinkOptions = ["0", "1"];
+
+flexShrinkOptions.forEach(shrink => {
+    document.getElementById(`flex-shrink-${shrink}`).addEventListener("click", () => {
+        boxFlexShrink.style.flexShrink = shrink;
+        spanFlexShrink.textContent = shrink;
+    });
+});
