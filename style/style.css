@@ -4,11 +4,11 @@
     --text-color: #181C14;
     --text_special-color: #41787A;
     --button-color: #76ABAE;
-    /*#41787A*/
     --color-blue: #4F8EF7;
     --color-red: #FF5C5C;
     --color-green: #3ED598;
     --color-yellow: #FFD644;
+    --color-purple: #cc2ed4;
     --shadow: 0.2em 0.2em 0.4em rgba(0, 0, 0, 0.2);
 }
 
@@ -23,6 +23,7 @@
         --color-red: #FF5C5C;
         --color-green: #3ED598;
         --color-yellow: #FFD644;
+        --color-purple: #cc2ed4;
     }
 }
 
@@ -203,6 +204,10 @@ button:hover {
     background-color: var(--color-yellow);
 }
 
+.box-purple {
+    background-color: var(--color-purple);
+}
+
 .box-stretch {
     height: 100%;
     aspect-ratio: unset;
@@ -240,6 +245,14 @@ button:hover {
 #div-align-items {
     justify-content: center;
     align-items: stretch;
+    gap: 1vw;
+}
+
+#div-align-content {
+    justify-content: center;
+    align-content: stretch;
+    flex-wrap: wrap;
+    gap: 1vw;
 }
 
 @media (min-width: 768px) {

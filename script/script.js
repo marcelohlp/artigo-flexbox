@@ -30,3 +30,14 @@ alignItemsOptions.forEach(align => {
         spanAlignItems.textContent = align;
     });
 });
+
+const divAlignContent = document.getElementById("div-align-content");
+const spanAlignContent = document.getElementById("span-align-content");
+const alignContentOptions = ["stretch", "flex-start", "flex-end", "center", "space-between", "space-around"];
+
+alignContentOptions.forEach(align => {
+    document.getElementById(`align-content-${align}`).addEventListener("click", () => {
+        divAlignContent.style.alignContent = align;
+        spanAlignContent.textContent = align;
+    });
+});

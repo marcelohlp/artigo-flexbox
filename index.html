@@ -226,21 +226,21 @@
 
                 <p class="paragraph">
                     Com a propriedade <code>align-items</code>, conseguimos definir como os elementos filhos de um
-                    container flex estarão alinhados ao longo do <em>cross axis</em>. Por padrão, um container flex já
-                    vem configurado com essa propriedade definida como <code>stretch</code>, fazendo com que todos os
-                    elementos filhos ocupem exatamente todo o espaço do <em>cross axis</em>, assumindo o tamanho do
-                    maior eixo perpendicular entre eles. No entanto, essa é uma configuração que pode ser ajustada com
-                    valores personalizados, conforme a necessidade do design.
+                    container flex serão alinhados ao longo do <em>cross axis</em> (eixo perpendicular ao <em>main
+                        axis</em>). Por padrão, um container flex já possui essa propriedade definida como
+                    <code>stretch</code>, fazendo com que todos os elementos filhos ocupem automaticamente todo o espaço
+                    disponível no <em>cross axis</em>, esticando-se para igualar a altura (ou largura, dependendo da
+                    direção do flex).
                 </p>
 
                 <p class="paragraph">
-                    Ao utilizarmos outros valores para a propriedade <code>align-items</code>, o comportamento
-                    <code>stretch</code> é desativado, e cada elemento passa a ocupar apenas o seu próprio tamanho ao
-                    longo do <em>cross axis</em>. O valor <code>center</code> é utilizado para alinhar todos os itens ao
-                    centro. Se quisermos que os itens fiquem alinhados ao início ou ao final do eixo transversal, usamos
-                    <code>flex-start</code> e <code>flex-end</code>, respectivamente. Mas ainda há outra possibilidade
-                    interessante: podemos alinhar os elementos com base no conteúdo interno de cada um por meio do valor
-                    <strong><code>baseline</code></strong>.
+                    Esse comportamento pode ser ajustado com outros valores, dependendo da necessidade do layout. Com
+                    <code>center</code>, os itens são centralizados ao longo do <em>cross axis</em>. Se quisermos que os
+                    itens fiquem alinhados ao início ou ao fim desse eixo, usamos <code>flex-start</code> ou
+                    <code>flex-end</code>, respectivamente. Também é possível alinhar os elementos com base na linha de
+                    base de seu conteúdo textual utilizando o valor <strong><code>baseline</code></strong>. Ao aplicar
+                    qualquer um desses valores, o comportamento <code>stretch</code> é desativado, e os itens passam a
+                    ocupar apenas o espaço necessário no <em>cross axis</em>.
                 </p>
 
 
@@ -270,6 +270,75 @@
                             </div>
                             <div class="box box-green box-no-stretch box-baseline">
                                 <p>3</p>
+                            </div>
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </section>
+
+            <section class="section-flex-direction">
+
+                <h3>Align content</h3>
+
+                <p class="paragraph">
+                    A propriedade <code>align-content</code>, por sua vez, não organiza os elementos individualmente em
+                    relação ao <em>cross axis</em>, mas sim as <strong>linhas do container flex</strong>. O valor padrão
+                    é
+                    <code>stretch</code>, que funciona de maneira semelhante ao <code>align-items</code>, esticando as
+                    linhas para ocupar todo o espaço disponível no container. No entanto, essa propriedade só tem efeito
+                    quando o container possui múltiplas linhas, o que exige a aplicação da propriedade
+                    <code>flex-wrap</code>.
+                </p>
+
+                <p class="paragraph">
+                    Os valores <code>flex-start</code>, <code>flex-end</code> e <code>center</code> também funcionam de
+                    forma parecida com o <code>align-items</code>, mas aplicam o alinhamento às linhas do container, e
+                    não
+                    diretamente aos seus elementos. Além disso, dois novos valores são específicos dessa propriedade:
+                    <code>space-between</code>, que distribui as linhas igualmente, deixando a primeira encostada no
+                    <em>cross start</em> e a última no <em>cross end</em>; e <code>space-around</code>, que
+                    distribui as linhas com espaços iguais ao redor de cada uma, criando margens entre todas as linhas e
+                    também entre as extremidades do container.
+                </p>
+
+
+
+                <div class="container-example">
+
+                    <p class="container-example-title">Exemplo de align-content:</p>
+
+                    <div class="container-example-test">
+
+                        <div class="container-example-button">
+                            <p class="container-example-paragraph">align-content: <span
+                                    id="span-align-content">stretch</span>
+                            </p>
+                            <button id="align-content-stretch">stretch</button>
+                            <button id="align-content-flex-start">flex-start</button>
+                            <button id="align-content-flex-end">flex-end</button>
+                            <button id="align-content-center">center</button>
+                            <button id="align-content-space-between">space-between</button>
+                            <button id="align-content-space-around">space-around</button>
+                        </div>
+
+                        <div id="div-align-content" class="container-example-work">
+                            <div class="box box-blue box-stretch-align-content">
+                                <p>1</p>
+                            </div>
+                            <div class="box box-red box-no-stretc">
+                                <p>2</p>
+                            </div>
+                            <div class="box box-green box-no-stretc">
+                                <p>3</p>
+                            </div>
+                            <div class="box box-yellow box-no-stretc">
+                                <p>4</p>
+                            </div>
+                            <div class="box box-purple box-no-stretc">
+                                <p>5</p>
                             </div>
                         </div>
 
