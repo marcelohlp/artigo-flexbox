@@ -41,3 +41,14 @@ alignContentOptions.forEach(align => {
         spanAlignContent.textContent = align;
     });
 });
+
+const divFlexWrap = document.getElementById("div-flex-wrap");
+const spanFlexWrap = document.getElementById("span-flex-wrap");
+const flexWrapOptions = ["nowrap", "wrap", "wrap-reverse"];
+
+flexWrapOptions.forEach(wrap => {
+    document.getElementById(`flex-wrap-${wrap}`).addEventListener("click", () => {
+        divFlexWrap.style.flexWrap = wrap;
+        spanFlexWrap.textContent = wrap;
+    })
+});

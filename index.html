@@ -262,10 +262,10 @@
                         </div>
 
                         <div id="div-align-items" class="container-example-work">
-                            <div class="box box-blue box-no-stretch">
+                            <div class="box box-blue box-stretch">
                                 <p>1</p>
                             </div>
-                            <div class="box box-red box-stretch">
+                            <div class="box box-red box-no-stretch">
                                 <p>2</p>
                             </div>
                             <div class="box box-green box-no-stretch box-baseline">
@@ -290,7 +290,7 @@
                     <code>stretch</code>, que funciona de maneira semelhante ao <code>align-items</code>, esticando as
                     linhas para ocupar todo o espaço disponível no container. No entanto, essa propriedade só tem efeito
                     quando o container possui múltiplas linhas, o que exige a aplicação da propriedade
-                    <code>flex-wrap</code>.
+                    <code>flex-wrap</code> que será abordada mais a frente.
                 </p>
 
                 <p class="paragraph">
@@ -325,19 +325,19 @@
                         </div>
 
                         <div id="div-align-content" class="container-example-work">
-                            <div class="box box-blue box-stretch-align-content">
+                            <div class="box box-blue">
                                 <p>1</p>
                             </div>
-                            <div class="box box-red box-no-stretc">
+                            <div class="box box-red">
                                 <p>2</p>
                             </div>
-                            <div class="box box-green box-no-stretc">
+                            <div class="box box-green">
                                 <p>3</p>
                             </div>
-                            <div class="box box-yellow box-no-stretc">
+                            <div class="box box-yellow">
                                 <p>4</p>
                             </div>
-                            <div class="box box-purple box-no-stretc">
+                            <div class="box box-purple">
                                 <p>5</p>
                             </div>
                         </div>
@@ -345,6 +345,75 @@
                     </div>
 
                 </div>
+
+            </section>
+
+            <section class="section-flex-direction">
+
+                <h3>Flex wrap</h3>
+
+                <p class="paragraph">
+                    Caso o conjunto de elementos dentro de um container flex seja muito grande, podemos enfrentar o
+                    problema de <em>"estouro"</em> dos limites do container. Quando isso ocorre, podemos usar a
+                    propriedade <code>flex-wrap</code>, que permite a quebra de linha entre os elementos do container.
+                </p>
+
+                <p class="paragraph">
+                    O valor padrão é <code>nowrap</code>, ou seja, todos os elementos permanecem em uma única linha,
+                    mesmo que ultrapassem os limites do container. Podemos alterar esse comportamento com o valor
+                    <code>wrap</code>, que permite a quebra de linha e faz com que os itens fluam para linhas
+                    subsequentes. Há também o valor <code>wrap-reverse</code>, que aplica a quebra
+                    de linha invertendo a direção em que as novas linhas são adicionadas.
+                </p>
+
+
+                <div class="container-example">
+
+                    <p class="container-example-title">Exemplo de flex-wrap:</p>
+
+                    <div class="container-example-test">
+
+                        <div class="container-example-button">
+                            <p class="container-example-paragraph">flex-wrap: <span id="span-flex-wrap">nowrap</span>
+                            </p>
+                            <button id="flex-wrap-nowrap">nowrap</button>
+                            <button id="flex-wrap-wrap">wrap</button>
+                            <button id="flex-wrap-wrap-reverse">wrap-reverse</button>
+                        </div>
+
+                        <div id="div-flex-wrap" class="container-example-work">
+                            <div class="box box-blue">
+                                <p>1</p>
+                            </div>
+                            <div class="box box-red">
+                                <p>2</p>
+                            </div>
+                            <div class="box box-green">
+                                <p>3</p>
+                            </div>
+                            <div class="box box-yellow">
+                                <p>4</p>
+                            </div>
+                        </div>
+
+                    </div>
+
+                </div>
+
+                <p class="paragraph">
+                    Há também outra maneira de aplicar a quebra de linhas ao mesmo tempo em que definimos a direção do
+                    container: por meio da propriedade <code>flex-flow</code>. Essa é uma <em>shorthand</em> que combina
+                    as propriedades <code>flex-direction</code> e <code>flex-wrap</code> em uma única linha.
+                </p>
+
+                <p class="paragraph">
+                    Alguns dos valores possíveis incluem: <code>row nowrap</code>, que define a direção principal como
+                    horizontal e impede a quebra de linha; <code>row wrap</code>, que mantém a direção horizontal, mas
+                    permite a quebra de linha; <code>column nowrap</code>, que organiza os itens verticalmente sem
+                    quebra; e <code>column wrap</code>, que organiza os itens em coluna e permite a
+                    quebra para novas colunas quando necessário.
+                </p>
+
 
             </section>
 

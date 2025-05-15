@@ -223,8 +223,8 @@ button:hover {
 }
 
 .container-example-work {
-    width: 60vw;
-    height: 60vw;
+    flex: 0 0 60vw;
+    aspect-ratio: 1 / 1;
     border: 0.1em solid var(--background-color);
     display: flex;
     align-items: center;
@@ -252,6 +252,14 @@ button:hover {
     justify-content: center;
     align-content: stretch;
     flex-wrap: wrap;
+    gap: 1vw;
+}
+
+#div-flex-wrap{
+    justify-content: flex-start;
+    flex-direction: row;
+    align-content: center;
+    flex-wrap: nowrap;
     gap: 1vw;
 }
 
@@ -284,8 +292,7 @@ button:hover {
     }
 
     .container-example-work {
-        width: 20vw;
-        height: 20vw;
+        flex: 0 0 20vw;
     }
 
 }
