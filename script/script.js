@@ -114,7 +114,7 @@ flexGrowOptions.forEach(grow => {
     });
 });
 
-const boxFlexShrink = document.getElementById("box-flex-shirink");
+const boxFlexShrink = document.getElementById("box-flex-shrink");
 const spanFlexShrink = document.getElementById("span-flex-shrink");
 const flexShrinkOptions = ["0", "1"];
 

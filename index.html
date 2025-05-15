@@ -15,6 +15,12 @@
 
 <body>
 
+    <header class="body-header">
+
+        <h1 class="header-h1">dev.tech</h1>
+        <p>Artigos de programação e tecnologia</p>
+
+    </header>
 
 
     <main>
@@ -36,7 +42,7 @@
 
                 <section>
 
-                    <h3>O que é flexbox?</h3>
+                    <h3 id="flexbox">Flexbox</h3>
 
                     <p class="paragraph">
                         O <strong>Flexbox</strong> é um modelo de layout em <strong>CSS</strong> que facilita a criação
@@ -60,7 +66,7 @@
 
                 <section>
 
-                    <h3>Conceitos fundamentais do Flexbox</h3>
+                    <h3 id="conceitos">Conceitos fundamentais</h3>
 
                     <p class="paragraph">
                         Mas antes de continuarmos, precisamos definir alguns conceitos importantes que nos auxiliarão no
@@ -111,7 +117,7 @@
 
                 <section>
 
-                    <h3>Flex direction</h3>
+                    <h3 id="flex-direction">Flex direction</h3>
 
                     <p class="paragraph">
                         A propriedade <code>flex-direction</code> é <strong>responsável por definir a direção</strong>
@@ -161,7 +167,7 @@
 
                 <section>
 
-                    <h3>Justify content</h3>
+                    <h3 id="justify-content">Justify content</h3>
 
                     <p class="paragraph">
                         A propriedade <code>justify-content</code> é responsável por <strong>alinhar o conteúdo de um
@@ -227,7 +233,7 @@
 
                 <section>
 
-                    <h3>Align items</h3>
+                    <h3 id="align-items">Align items</h3>
 
                     <p class="paragraph">
                         Com a propriedade <code>align-items</code>, conseguimos definir como os elementos filhos de um
@@ -292,7 +298,7 @@
 
                 <section>
 
-                    <h3>Align content</h3>
+                    <h3 id="align-content">Align content</h3>
 
                     <p class="paragraph">
                         A propriedade <code>align-content</code>, por sua vez, não organiza os elementos individualmente
@@ -367,7 +373,7 @@
 
                 <section>
 
-                    <h3>Flex wrap</h3>
+                    <h3 id="flex-wrap">Flex wrap</h3>
 
                     <p class="paragraph">
                         Caso o conjunto de elementos dentro de um container flex seja muito grande, podemos enfrentar o
@@ -442,7 +448,7 @@
 
                 <section>
 
-                    <h3>Sabia que podemos alterar o comportamento dos elementos filhos?</h3>
+                    <h3 id="elementos-filhos">Elementos filhos</h3>
 
                     <p class="paragraph">
                         Podemos criar layouts muito mais interessantes se aplicarmos os conceitos do Flexbox não apenas
@@ -458,7 +464,7 @@
 
                 <section>
 
-                    <h3>Align self</h3>
+                    <h3 id="align-self">Align self</h3>
 
                     <p class="paragraph">
                         Sabemos que alguns filhos gostam de ser rebeldes e ir na contramão do que está sendo proposto
@@ -517,7 +523,7 @@
 
                 <section>
 
-                    <h3>Order</h3>
+                    <h3 id="order">Order</h3>
 
                     <p class="paragraph">
                         Nem mesmo a ordem dos elementos em um container flex precisa ser a mesma declarada no arquivo
@@ -576,7 +582,7 @@
 
                 <section>
 
-                    <h3>Flex grow</h3>
+                    <h3 id="flex-grow">Flex grow</h3>
 
                     <p class="paragraph">
                         Com a propriedade <code>flex-grow</code>, você pode <strong>definir qual proporção do espaço
@@ -625,7 +631,7 @@
 
                 <section>
 
-                    <h3>Flex shrink</h3>
+                    <h3 id="flex-shrink">Flex shrink</h3>
 
                     <p class="paragraph">
                         A propriedade <code>flex-shrink</code> define se um elemento filho pode encolher quando o espaço
@@ -662,7 +668,7 @@
                                 <div class="box box-green box-flex-shrink">
                                     <p>3</p>
                                 </div>
-                                <div id="box-flex-shirink" class="box box-yellow box-flex-shrink">
+                                <div id="box-flex-shrink" class="box box-yellow box-flex-shrink">
                                     <p>4</p>
                                 </div>
                             </div>
@@ -675,7 +681,7 @@
 
                 <section>
 
-                    <h3>Flex basis</h3>
+                    <h3 id="flex-basis">Flex basis</h3>
 
                     <p class="paragraph">
                         Ao utilizar a propriedade <code>flex-basis</code>, estamos determinando qual será o
@@ -722,7 +728,7 @@
 
                 <section>
 
-                    <h3>Flex</h3>
+                    <h3 id="flex">Flex</h3>
 
                     <p class="paragraph">
                         A propriedade <code>flex</code> é uma <em>shorthand</em> que resume o uso de três propriedades
@@ -733,15 +739,54 @@
 
                 </section>
 
+                <section>
+
+                    <h3 id="autor">Sobre o autor</h3>
+
+                    <p class="paragraph">
+                        Sou <a href="https://www.linkedin.com/in/marcelo-hpaschoal/" class="anchor">Marcelo Paschoal</a>
+                        apaixonado por tecnologia e desenvolvimento de software.
+                        Tenho mais de dois anos de experiência com a linguagem Java, mas hoje estou explorando novas
+                        tecnologias com foco no desenvolvimento web. Espero que tenha gostado do conteúdo!
+                    </p>
+
+                </section>
+
             </article>
 
         </div>
 
         <aside>
 
+            <div class="aside-menu">
+                <h4>Tópicos abordados</h4>
+
+                <ul class="aside-menu-list">
+                    <li><a href="#flexbox">Flexbox</a></li>
+                    <li><a href="#conceitos">Conceitos fundamentais</a></li>
+                    <li><a href="#flex-direction">Flex direction</a></li>
+                    <li><a href="#justify-content">Justify content</a></li>
+                    <li><a href="#align-items">Align items</a></li>
+                    <li><a href="#align-content">Align content</a></li>
+                    <li><a href="#flex-wrap">Flex wrap</a></li>
+                    <li><a href="#elementos-filhos">Elementos filhos</a></li>
+                    <li><a href="#align-self">Align self</a></li>
+                    <li><a href="#order">Order</a></li>
+                    <li><a href="#flex-grow">Flex grow</a></li>
+                    <li><a href="#flex-shrink">Flex shrink</a></li>
+                    <li><a href="#flex-basis">Flex basis</a></li>
+                    <li><a href="#flex">Flex</a></li>
+                    <li><a href="#autor">Sobre o autor</a></li>
+                </ul>
+            </div>
+
         </aside>
 
     </main>
+
+    <footer class="body-footer">
+        <p class="paragraph">Copyright &copy; dev.tech</p>
+    </footer>
 
     <script src="./script/script.js"></script>
 
