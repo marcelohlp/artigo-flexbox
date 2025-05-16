@@ -201,6 +201,8 @@ button:hover {
 
 /***************/
 
+/* BODY FOOTER */
+
 .body-footer {
     display: flex;
     justify-content: center;
@@ -209,6 +211,8 @@ button:hover {
     background-color: var(--background-color-secondary);
     border-top: 0.5em solid var(--text_special-color)
 }
+
+/***************/
 
 .article-content {
     width: 100%;
