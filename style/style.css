@@ -100,24 +100,9 @@ code {
     font-size: 1em;
 }
 
-button {
-    font-size: 1em;
-    font-weight: bold;
-    padding: 1vw 1.5vw;
-    color: var(--background-color-secondary);
-    background-color: var(--button-color);
-    border: 0.1em solid transparent;
-    border-radius: 0.2em;
-    box-shadow: var(--shadow);
-}
 
-button:hover {
-    background-color: var(--background-color-secondary);
-    color: var(--text-color);
-    border: 0.1em solid var(--text-color);
-}
 
-.article-content{
+.article-content {
     margin: 0 0 20vh 0;
 }
 
@@ -248,8 +233,6 @@ button:hover {
 
 .aside-menu-list .aside-li.active .aside-anchor {
     font-weight: bold;
-    width: 100%;
-    height: 100%;
     color: var(--text-special-color);
     border-left: 3px solid var(--text-special-color);
     padding-left: 8px;
@@ -268,7 +251,9 @@ button:hover {
 
 /***************/
 
-.header {
+/* SECTION *****/
+
+.article-header {
     margin: 1em 0;
     padding: 1em 0;
     border-bottom: 1px solid var(--text-color);
@@ -279,43 +264,81 @@ button:hover {
     margin: 0 0 1em 0;
 }
 
-.container-example {
+/***************/
+
+/* EXEMPLE *****/
+
+.section-example {
     display: flex;
-    margin: 2vw 0;
-    padding: 3vw 2vw;
+    margin: 2vw 0 2vw 0;
+    padding: 2vw 1vw 2vw 1vw;
     flex-direction: column;
     align-items: center;
-    justify-content: space-between;
     background-color: var(--background-color-secondary);
-    border-radius: 0.5em;
+    border-radius: var(--border-radius);
     box-shadow: var(--shadow);
 }
 
-.container-example-title {
+.section-example-title {
     font-size: 1.5em;
     margin: 0 0 1em 0;
+    color: var(--text-special-color);
 }
 
-.container-example-test {
+.section-example-test {
+    display: flex;
+    flex-direction: column;
+    gap: 1em;
+}
+
+.section-example-menu {
     display: flex;
     flex-direction: column;
     align-items: center;
-    width: 100%;
-    gap: 2vw;
+    gap: 1em;
+    padding: 0 1em 0 1em;
 }
 
-.container-example-paragraph {
+.section-example-paragraph {
     font-size: 1.2em;
 }
 
-.container-example-button {
-    width: 60vw;
+.section-example-menu-button {
     display: flex;
-    flex-direction: column;
-    align-items: start;
-    justify-content: center;
-    gap: 1vw;
+    justify-content: space-between;
+    align-content: center;
+    flex-wrap: wrap;
+    gap: 1em;
 }
+
+.section-example-button {
+    font-size: 1em;
+    font-weight: bold;
+    padding: 0.5em 1em 0.5em 1em;
+    flex: 1 1 40%;
+    color: var(--background-color-secondary);
+    background-color: var(--button-color);
+    border: 0.1em solid transparent;
+    border-radius: var(--border-radius);
+    box-shadow: var(--shadow);
+}
+
+.section-example-button:hover {
+    color: var(--text-color);
+    background-color: var(--background-color-secondary);
+    border: 0.1em solid var(--text-color);
+}
+
+.section-example-work {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    aspect-ratio: 1 / 1;
+    border: 0.1em solid var(--background-color);
+    border-radius: var(--border-radius);
+}
+
+/***************/
 
 .box {
     color: var(--background-color-secondary);
@@ -369,15 +392,6 @@ button:hover {
     height: 25%;
 }
 
-.container-example-work {
-    flex: 0 0 60vw;
-    aspect-ratio: 1 / 1;
-    border: 0.1em solid var(--background-color);
-    display: flex;
-    align-items: center;
-    border-radius: 0.2em;
-}
-
 .span-blue {
     color: var(--color-blue);
 }
@@ -395,15 +409,12 @@ button:hover {
     gap: 1vw;
 }
 
-#div-flex-direction {
-    justify-content: center;
+/* #div-flex-direction {
     flex-direction: row;
-    gap: 1vw;
-}
+} */
 
 #div-justify-content {
     justify-content: flex-start;
-    flex-direction: row;
 }
 
 #div-align-items {
@@ -494,10 +505,10 @@ button:hover {
         font-size: 1.8em;
     }
 
-    button {
+    /* button {
         font-size: 1.1em;
         width: 80%;
-    }
+    } */
 
     .container-example-test {
         display: flex;
@@ -562,6 +573,42 @@ button:hover {
         box-shadow: var(--shadow);
         border-radius: var(--border-radius);
         display: block;
+    }
+
+    /***************/
+
+    /* EXEMPLE *****/
+
+    .section-example-test {
+        display: flex;
+        flex-direction: row;
+        width: 100%;
+        gap: 1em;
+    }
+
+    .section-example-title {
+        margin: 0 0 2em 0;
+    }
+
+    .section-example-menu {
+        justify-content: center;
+        align-items: start;
+        flex: 1 1 50%;
+    }
+
+    .section-example-menu-button {
+        flex-direction: column;
+        justify-content: center;
+        flex-wrap: nowrap;
+        width: 100%;
+    }
+
+    .section-example-button {
+        width: 80%;
+    }
+
+    .section-example-work {
+        flex: 1 1 50%;
     }
 
     /***************/
