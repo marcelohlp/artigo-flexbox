@@ -399,6 +399,12 @@ code {
     height: 25%;
 }
 
+.box-flex-shirink {
+    flex-shrink: 1;
+    min-height: 25%;
+    aspect-ratio: unset;
+}
+
 /***************/
 
 .span-blue {
@@ -475,12 +481,6 @@ code {
     justify-content: flex-start;
     align-content: center;
     gap: 1vw;
-}
-
-#box-flex-shirink {
-    flex-shrink: 1;
-    min-width: 25%;
-    aspect-ratio: 1 / 1;
 }
 
 #div-flex-basis {
