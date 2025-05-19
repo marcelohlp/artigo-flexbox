@@ -338,7 +338,14 @@ code {
     border-radius: var(--border-radius);
 }
 
+.div-order {
+    display: flex;
+    gap: 1vw;
+}
+
 /***************/
+
+/* BOXES *******/
 
 .box {
     color: var(--background-color-secondary);
@@ -392,6 +399,8 @@ code {
     height: 25%;
 }
 
+/***************/
+
 .span-blue {
     color: var(--color-blue);
 }
@@ -403,15 +412,6 @@ code {
 .span-green {
     color: var(--color-green);
 }
-
-.div-order {
-    display: flex;
-    gap: 1vw;
-}
-
-/* #div-flex-direction {
-    flex-direction: row;
-} */
 
 #div-justify-content {
     justify-content: flex-start;
@@ -479,8 +479,8 @@ code {
 
 #box-flex-shirink {
     flex-shrink: 1;
-    height: 25%;
-    aspect-ratio: unset;
+    min-width: 25%;
+    aspect-ratio: 1 / 1;
 }
 
 #div-flex-basis {
@@ -505,28 +505,6 @@ code {
         font-size: 1.8em;
     }
 
-    /* button {
-        font-size: 1.1em;
-        width: 80%;
-    } */
-
-    .container-example-test {
-        display: flex;
-        flex-direction: row;
-        align-items: center;
-        justify-content: space-between;
-        width: 100%;
-        gap: 0;
-    }
-
-    .container-example-button {
-        width: 35vw;
-    }
-
-    .container-example-work {
-        flex: 0 0 20vw;
-    }
-
 }
 
 @media (min-width: 1024px) {
@@ -536,8 +514,7 @@ code {
         gap: 5vw;
     }
 
-    button {
-        font-size: 1.2em;
+    .article-content {
         width: 70%;
     }
 
@@ -612,13 +589,5 @@ code {
     }
 
     /***************/
-
-    .article-content {
-        width: 70%;
-    }
-
-    .container-example-button {
-        width: 25vw;
-    }
 
 }
