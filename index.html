@@ -6,6 +6,9 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
+
     <link rel="stylesheet" href="./style/reset.css">
     <link rel="stylesheet" href="./style/style.css">
 
@@ -20,32 +23,24 @@
         <div class="body-header-main-content">
 
             <div class="logo">
-                <h1 class="header-h1">dev.tech</h1>
-                <p class="header-p">Sua revista de programação e tecnologia</p>
+                <h1 class="body-header-h1">dev.tech</h1>
+                <p class="body-header-p">Sua revista de programação e tecnologia</p>
             </div>
 
-            <div class="body-header-menu">
+            <nav id="body-header-nav" class="body-header-nav" aria-label="Menu principal do site">
+                <ul class="body-header-ul">
+                    <li><a href="#" class="anchor">Início</a></li>
+                    <li><a href="#" class="anchor">Novidades</a></li>
+                    <li><a href="#" class="anchor">Mais comentados</a></li>
+                    <li><a href="#" id="button-login" class="body-header-button button-login">Entre</a></li>
+                    <li><a href="#" id="button-register" class="body-header-button button-register">Cadastre-se</a></li>
+                </ul>
+            </nav>
 
-                <nav class="body-header-nav" aria-label="Menu principal do site">
-                    <ul class="body-header-ul">
-                        <li><a href="#">Início</a></li>
-                        <li><a href="#">Novidades</a></li>
-                        <li><a href="#">Mais comentados</a></li>
-                    </ul>
-                </nav>
-
-                <div class="body-header-button-content">
-
-                    <button class="body-header-button button-login">Entrar</button>
-                    <button class="body-header-button button-register">Cadastrar-se</button>
-
-                </div>
-
-                <button class="body-header-button-menu">
-                    <img src="./assets/menu.svg" alt="Menu principal do site" class="body-header-button-menu-img">
-                </button>
-
-            </div>
+            <button id="body-header-button-menu" class="body-header-button-menu" aria-expanded="false"
+                aria-label="Abrir menu principal" aria-controls="menu-principal">
+                <i id class="fa-solid fa-bars body-header-button-menu-img"></i>
+            </button>
 
         </div>
 
@@ -816,6 +811,7 @@
         <p class="paragraph">Copyright &copy; dev.tech</p>
     </footer>
 
+    <script src="./script/navigation-menu.js"></script>
     <script src="./script/script.js"></script>
 
 </body>
